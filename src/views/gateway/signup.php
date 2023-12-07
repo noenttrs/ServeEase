@@ -24,7 +24,7 @@ require_once VIEWS . "base/Header.php" ?>
             </div>
             <div class="main__signup__clientRetypePassword">
                 <input type="password" name="clientRetypePassword" id="clientRetypePasswordId">
-                <label for="clientRetypePasswordId">Confirmer le mot de passe</label>
+                <label for="clientRetypePasswordId">Confirmer le mot de pass</label>
             </div>
         </form>
     </section>
