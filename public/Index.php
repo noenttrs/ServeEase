@@ -10,11 +10,17 @@ $router = new ServeEase\Router($_SERVER["REQUEST_URI"]);
 
 
 $router->get('/', "MainController@showMain");
+
+// Signup
 $router->get('/signup', "ClientController@showSignup");
 $router->get('/logout', "ClientController@logout");
 
 
 
 $router->post('/signup', "ClientController@signup");
+
+// Signing 
+$router->get('/signin', "ClientController@showSignin");
+$router->post('/signin', "ClientController@signin");
 
 $router->run();

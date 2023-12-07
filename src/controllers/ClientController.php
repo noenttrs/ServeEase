@@ -13,65 +13,14 @@ class ClientController {
         require VIEWS . "gateway/signup.php";
     }
 
+    function showSignin() {
+        require VIEWS . "gateway/signin.php";
+    }
+
     function signup() {
-        $clientNameValue = $_POST["clientName"];
-        $clientSurnameValue = $_POST["clientSurname"];
-        $clientMailValue = $_POST["clientMail"];
-        $clientPasswordValue = $_POST["clientPassword"];
-        $clientPasswordCorrespondanceValue = $_POST["clientRetypePassword"];
 
-        if(strlen($clientNameValue) > 50) {
-            $clientName = "Le prénom ne doit pas dépasser 50 caractères";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-        if(strlen($clientSurnameValue) > 50) {
-            $clientSurname = "Le nom de famille ne doit pas dépasser 50 caractères";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-        if(!filter_var($clientMailValue, FILTER_VALIDATE_EMAIL)){
-            $clientMail = "L'adresse mail n'est pas valide";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-        if(strlen($clientPasswordValue) < 8) {
-            $clientPassword = "Le mot de passe doit contenir au moins 8 caractères";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-        if(!preg_match("#[0-9]+#", $clientPasswordValue)) {
-            $clientPassword = "Le mot de passe doit contenir au moins un chiffre";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-        if(!preg_match("#[a-zA-Z]+#", $clientPasswordValue)) {
-            $clientPassword = "Le mot de passe doit contenir au moins une lettre";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-        if(!preg_match("#[\W]+#", $clientPasswordValue)) {
-            $clientPassword = "Le mot de passe doit contenir au moins un caractère spécial";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-        if(!preg_match("#[A-Z]+#", $clientPasswordValue)) {
-            $clientPassword = "Le mot de passe doit contenir au moins une majuscule";
-            require VIEWS . "gateway/signup.php";
-            return;
-        }
-
-
-        if($clientPasswordValue != $clientPasswordCorrespondanceValue) {
-            $clientPasswordCorrespondance = "Les mots de passe ne correspondent pas";
-            require VIEWS . "gateway/signup.php";
+        if($_POST["clientPassword"] != $_POST["clientRetypePassword"]) {
+            echo "Les mots de passe ne correspondent pas";
             return;
         }
         $client = new Client();
