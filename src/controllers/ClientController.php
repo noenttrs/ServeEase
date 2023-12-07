@@ -18,6 +18,7 @@ class ClientController {
     }
 
     function signup() {
+
         if($_POST["clientPassword"] != $_POST["clientRetypePassword"]) {
             echo "Les mots de passe ne correspondent pas";
             return;
@@ -34,6 +35,11 @@ class ClientController {
         $clientManager->saveClient($client);
 
         $_SESSION["client"] = $client->session();
+        header("Location: /");
+    }
+
+    function logout() {
+        session_destroy();
         header("Location: /");
     }
 }
