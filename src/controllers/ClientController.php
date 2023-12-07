@@ -30,9 +30,8 @@ class ClientController {
         $clientManager = new ClientManager();
         $clientManager->saveClient($client);
 
-        
-        
-
+        $_SESSION["client"] = $client->session();
+        header("Location: /");
     }
 }
 ?>

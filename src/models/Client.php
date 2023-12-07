@@ -70,4 +70,15 @@ class Client{
         $this->CLIENT_FIDELITY = $CLIENT_FIDELITY;
     }
 
+    function session(){
+        //return un object client en session
+        return [
+            "CLIENT_ID" => $this->CLIENT_ID,
+            "CLIENT_NAME" => $this->CLIENT_NAME,
+            "CLIENT_SURNAME" => $this->CLIENT_SURNAME,
+            "CLIENT_MAIL" => $this->CLIENT_MAIL,
+            "CLIENT_ROLE" => $this->CLIENT_ROLE
+        ];
+    }
+
 }
