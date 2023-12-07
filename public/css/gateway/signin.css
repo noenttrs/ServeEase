@@ -60,3 +60,17 @@ main {
 .main__signin__redirectToSignin {
     text-align: center;
 }
+
+.main__signin__badRequest {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
