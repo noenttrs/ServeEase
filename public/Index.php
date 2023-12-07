@@ -13,7 +13,7 @@ $router->get('/signup', "ClientController@showSignup");
 $router->post('/signup', "ClientController@signup");
 
 // Signing 
-$router->get('/signup', "ClientController@showSignin");
-$router->post('/signup', "ClientController@signin");
+$router->get('/signin', "ClientController@showSignin");
+$router->post('/signin', "ClientController@signin");
 
 $router->run();
