@@ -26,6 +26,7 @@ require_once VIEWS . "base/Header.php" ?>
                 <input type="password" name="clientRetypePassword" id="clientRetypePasswordId">
                 <label for="clientRetypePasswordId">Confirmer le mot de passe</label>
             </div>
+            <input type="submit" value="Créer mon compte">
         </form>
     </section>
 </main>
