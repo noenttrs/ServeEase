@@ -1,6 +1,6 @@
 <?php
 $pathCss = "css/gateway/signup.css";
-require_once VIEWS . "base/Header.php" ?>
+require_once VIEWS . "base/Header.php";?>
 
 <?php if (isset($_SESSION["client"])) : ?>
     <script>
@@ -16,27 +16,28 @@ require_once VIEWS . "base/Header.php" ?>
             <h2>Inscrivez-vous !</h2>
             <form action="/signup" class="main__signup__content__form" method="post">
                 <div class="main__signup__clientName autoInputText">
-                    <input type="text" name="clientName" id="clientNameId" placeholder=" " required>
+                    <input type="text" name="clientName" id="clientNameId" placeholder=" " value="<?php if(isset($clientNameValue)) echo $clientNameValue ?>" required>
                     <label for="clientNameId">Prénom</label>
-                    <small></small>
+
+                    <small><?php if(isset($clientName)) echo $clientName?></small>
                 </div>
                 <div class="main__signup__clientSurname autoInputText">
-                    <input type="text" name="clientSurname" id="clientSurnameId" placeholder=" " required>
+                    <input type="text" name="clientSurname" id="clientSurnameId" placeholder=" " value="<?php if(isset($clientSurnameValue)) echo $clientSurnameValue ?>" required>
                     <label for="clientSurnameId">Nom de famille</label>
-                    <small></small>
+                    <small><?php if(isset($clientSurname)) echo $clientSurname?></small>
                 </div>
                 <div class="main__signup__clientMail autoInputText">
-                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " required>
+                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " value="<?php if(isset($clientSurnameValue)) echo $clientSurnameValue ?>" required>
                     <label for="clientMailId">Adresse e-mail</label>
-                    <small></small>
+                    <small><?php if(isset($clientEmail)) echo $clientEmail ?></small>
                 </div>
                 <section class="main__signup__clientPassword">
                     <div class="inputPassword autoInputPassword">
-                        <input type="password" name="clientPassword" id="clientPasswordId" placeholder=" " required>
+                        <input type="password" name="clientPassword" id="clientPasswordId" placeholder=" " value="<?php if(isset($clientPasswordValue)) echo $clientPasswordValue ?>" required>
                         <label for="clientPasswordId">Mot de passe</label>
                         <i class="fa-solid fa-eye-slash"></i>
                     </div>
-                    <small></small>
+                    <small><?php if(isset($clientPassword)) echo $clientPassword?></small>
                 </section>
                 <section class="main__signup__clientRetypePassword">
                     <div class="inputPassword autoInputPassword">
@@ -44,7 +45,7 @@ require_once VIEWS . "base/Header.php" ?>
                         <label for="clientRetypePasswordId">Confirmer le mot de passe</label>
                         <i class="fa-solid fa-eye-slash"></i>
                     </div>
-                    <small></small>
+                    <small><?php if(isset($clientPasswordCorrespondance)) echo $clientPasswordCorrespondance?></small>
                 </section>
                 <input type="submit" value="Créer mon compte" class="main__signup__content__form__submit">
             </form>

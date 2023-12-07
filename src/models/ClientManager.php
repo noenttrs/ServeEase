@@ -29,4 +29,5 @@ class ClientManager {
             "clientFidelity" => 20
         ]);
     }
+
 }
