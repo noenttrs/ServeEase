@@ -1,0 +1,9 @@
+.main__signup {
+    display: flex;
+    flex-direction: row;
+}
+
+.main__signup img,
+.main__signup form {
+    width: 50%;
+}
