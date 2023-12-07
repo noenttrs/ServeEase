@@ -8,5 +8,6 @@ require '../vendor/autoload.php';
 $router = new ServeEase\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "MainController@showMain");
 $router->get('/signup', "ClientController@showSignup");
+$router->post('/signup', "ClientController@signup");
 
 $router->run();
