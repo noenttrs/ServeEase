@@ -1,0 +1,144 @@
+.body__main__presentation {
+    border-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.20) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px inset;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 50px 100px;
+}
+
+.body__main__presentation__content {
+    width: 50%;
+}
+
+.body__main__presentation__image {
+    width: 50%;
+    transform: scale(1.2);
+}
+
+.body__main__presentation__h1 {
+    color: var(--black);
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+.body__main__presentation__h1 span {
+    color: var(--green);
+}
+
+.body__main__presentation__p {
+    color: #333333;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.body__main__presentation__a {
+    background-color: var(--black);
+    color: #fff;
+    padding: 15px 30px;
+}
+
+.body__main__trend,
+.body__main__menu,
+.body__main__burger {
+    margin: 150px 100px 100px 100px;
+}
+
+.body__main__h2 {
+    font-size: 50px;
+    color: var(--black);
+    margin: 50px 0;
+}
+
+.body__main__managerWithSwipper {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 8px;
+}
+
+.body__main__container {
+    width: 350px !important;
+    height: 440px !important;
+    cursor: pointer;
+    padding: 10px;
+    transition: all .1s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body__main__container:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.body__main__container img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+}
+
+.body__main__container__content {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.body__main__separation {
+    padding: 100px;
+    background-image: url("/img/pexels-valeria-boltneva-1639557.jpg");
+    background-size: cover;
+    height: 400px;
+}
+
+.body__main__descriptionProduct__content__image img {
+    width: 400px;
+    height: auto;
+}
+
+.body__main__managerWithGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 10px;
+}
+
+.body__main__descriptionOfProduct {
+    padding: 50px 100px 50px 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    background-color: #f8f9fa;
+}
+
+.body__main__descriptionOfProduct__content,
+.body__main__descriptionOfProduct__image {
+    width: 50%;
+}
+
+.body__main__descriptionOfProduct__image img {
+    width: 100%;
+    height: auto;
+}
+
+.body__main__descriptionOfProduct__h2 {
+    font-size: 50px;
+    color: var(--black);
+    margin-bottom: 50px;
+}
+
+.body__main__descriptionOfProduct__p {
+    color: #333333;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.body__main__descriptionOfProduct__p span {
+    color: var(--green);
+}

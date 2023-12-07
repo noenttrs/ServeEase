@@ -1,0 +1,9 @@
+{
+    "name": "mzn/serve-ease",
+    "autoload": {
+        "psr-4": {
+            "ServeEase\\": "src/"
+        }
+    },
+    "require": {}
+}

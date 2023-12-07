@@ -1,0 +1,28 @@
+footer {
+    background-color: var(--black);
+    color: #fff;
+    padding: 50px;
+}
+
+.footer__follow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer__follow__h2 {
+    font-size: 30px;
+}
+
+.footer__follow__icon {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.footer__follow__icon i {
+   font-size: 30px;
+   cursor: pointer;
+}
