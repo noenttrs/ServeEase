@@ -27,7 +27,7 @@ require_once VIEWS . "base/Header.php";?>
                     <small><?php if(isset($clientSurname)) echo $clientSurname?></small>
                 </div>
                 <div class="main__signup__clientMail autoInputText">
-                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " value="<?php if(isset($clientSurnameValue)) echo $clientSurnameValue ?>" required>
+                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " value="<?php if(isset($clientMailValue)) echo $clientMailValue ?>" required>
                     <label for="clientMailId">Adresse e-mail</label>
                     <small><?php if(isset($clientEmail)) echo $clientEmail ?></small>
                 </div>
