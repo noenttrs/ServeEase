@@ -28,15 +28,32 @@ if (session_status() == 1) {
             <a href="/">
                 <h2 class="body__header__h2">ServeEase</h2>
             </a>
-            <section class="body__header__connexion">
-                <div class="body__header__connexion__singin">
-                    <i class="fa-solid fa-user"></i>
-                    <a href="/signin">Connexion</a>
-                </div>
-                <div class="body__header__connexion__singup">
-                    <a href="/signup">Inscription</a>
-                </div>
-            </section>
+
+            <!-- cacher le bouton connexion et inscription si l'utilisateur est connecté -->
+            <?php if (isset($_SESSION["client"])) : ?>
+                <section class="body__header__connexion">
+                    <div class="body__header__connexion__singin">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="/account">Mon compte</a>
+                    </div>
+                    <div class="body__header__connexion__singup">
+                        <a href="/logout">Déconnexion</a>
+                    </div>
+                </section>
+            <?php endif; ?>
+
+            <!-- afficher le bouton connexion et inscription si l'utilisateur n'est pas connecté -->
+            <?php if (!isset($_SESSION["client"])) : ?>
+                <section class="body__header__connexion">
+                    <div class="body__header__connexion__singin">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="/signin">Connexion</a>
+                    </div>
+                    <div class="body__header__connexion__singup">
+                        <a href="/signup">Inscription</a>
+                    </div>
+                </section>
+            <?php endif; ?>
         </nav>
     </header>
 </body>
