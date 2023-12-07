@@ -38,6 +38,18 @@ class ClientController {
         header("Location: /");
     }
 
+    function signin(){
+        $clientManager = new ClientManager();
+        $client = $clientManager->connectClient($_POST["clientMail"], $_POST["clientPassword"]);
+        $isValidClient = count($client);
+        if($isValidClient < 1) {
+            echo "Le compte n'existe pas";
+            return;
+        } 
+        // $_SESSION["client"] = $isValidClient->session();
+        header("Location: /");
+    }
+    
     function logout() {
         session_destroy();
         header("Location: /");
