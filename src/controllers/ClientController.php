@@ -78,7 +78,7 @@ class ClientController {
             require VIEWS . "gateway/signup.php";
             return;
         }
-        
+
         $client = new Client();
         $client->setClientName($_POST["clientName"]);
         $client->setClientSurname($_POST["clientSurname"]);
@@ -88,6 +88,12 @@ class ClientController {
         $client->setClientFidelity(20);
 
         $clientManager = new ClientManager();
+
+        if($clientManager->verifyClientMail($client->getClientMail()) > 0) {
+            $clientMail = "L'adresse mail est déjà utilisée";
+            require VIEWS . "gateway/signup.php";
+            return;
+        }
         $clientManager->saveClient($client);
 
         $_SESSION["client"] = $client->session();
