@@ -30,7 +30,7 @@ require_once VIEWS . "base/Header.php" ?>
                 </section>
                 <input type="submit" value="Me connecter" class="main__signin__content__form__submit">
             </form>
-            <p class="main__signin__redirectToSignin">Vous avez déjà un compte ? <a href="/signin">Me connecter</a></p>
+            <p class="main__signin__redirectToSignin">Vous n'avez pas de compte ? <a href="/signup">M'inscrire</a></p>
         </div>
     </section>
     <script src="js/function/inputPasswordSystem.js"></script>
