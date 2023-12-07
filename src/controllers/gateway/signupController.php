@@ -1,6 +1,9 @@
 <?php
 
 namespace ServeEase\controllers\gateway;
+
+use ServeEase\models\ClientManager;
+
 class SignupController {
     function __construct() {
 
@@ -18,8 +21,8 @@ class SignupController {
         $clientRetypePassword = $_POST["clientRetypePassword"];
 
         if ($clientPassword == $clientRetypePassword) {
-            $client = new \ServeEase\models\Client($clientName, $clientSurname, $clientMail, $clientPassword);
-            $client->save();
+            $client = new ClientManager();
+            $client->saveClient();
             header("Location: /");
         } else {
             header("Location: /signup");
