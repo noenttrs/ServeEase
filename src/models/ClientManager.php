@@ -7,18 +7,18 @@ use ServeEase\models\Client;
 class ClientManager {
     // Add your manager methods here
 
-    function __construct() {
+    private $db;
 
+    function __construct() {
+        $this->db = new \PDO('mysql:host=' . HOST . ';dbname=' . DATABASE, USER, PASSWORD);
     }
 
     function saveClient() {
-        $clientName = $_POST["clientName"];
-        $clientSurname = $_POST["clientSurname"];
-        $clientMail = $_POST["clientMail"];
-        $clientPassword = $_POST["clientPassword"];
-        $clientRetypePassword = $_POST["clientRetypePassword"];
-
-        $db = new \PDO("mysql:host=localhost;dbname=servease;charset=utf8", "root", "root");
+        $clientName = $client->getClientName();
+        $clientSurname = $client->getClientSurname();
+        $clientMail = $client->getClientMail();
+        $clientPassword = $client->getClientPassword();
+        
         $query = $db->prepare("INSERT INTO client (clientName, clientSurname, clientMail, clientPassword) VALUES (:clientName, :clientSurname, :clientMail, :clientPassword)");
         $query->execute([
             "clientName" => $clientName,
