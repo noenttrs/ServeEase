@@ -13,8 +13,11 @@ class ClientController {
         require VIEWS . "gateway/signup.php";
     }
 
-    function signup() {
+    function showSignin() {
+        require VIEWS . "gateway/signin.php";
+    }
 
+    function signup() {
         if($_POST["clientPassword"] != $_POST["clientRetypePassword"]) {
             echo "Les mots de passe ne correspondent pas";
             return;
