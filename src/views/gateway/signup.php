@@ -8,7 +8,7 @@ require_once VIEWS . "base/Header.php" ?>
         <form action="" class="main__signup__form">
             <div class="main__signup__clientName">
                 <input type="text" name="clientName" id="clientNameId">
-                <label for="clientNameId">Prenom</label>
+                <label for="clientNameId">Prénom</label>
             </div>
             <div class="main__signup__clientSurname">
                 <input type="text" name="clientSurname" id="clientSurnameId">
