@@ -3,12 +3,19 @@
 namespace ServeEase\models;
 
 class Client{
+    private $CLIENT_ID;
     private $CLIENT_NAME;
     private $CLIENT_SURNAME;
     private $CLIENT_MAIL;
     private $CLIENT_PASSWORD;
+    private $CLIENT_ROLE;
+    private $CLIENT_FIDELITY;
 
     function __construct() {
+    }
+
+    function getClientId() {
+        return $this->CLIENT_ID;
     }
 
     function getClientName() {
@@ -27,6 +34,18 @@ class Client{
         return $this->CLIENT_PASSWORD;
     }
 
+    function getClientRole() {
+        return $this->CLIENT_ROLE;
+    }
+
+    function getClientFidelity() {
+        return $this->CLIENT_FIDELITY;
+    }
+
+    function setClientId($CLIENT_ID) {
+        $this->CLIENT_ID = $CLIENT_ID;
+    }
+
     function setClientName($CLIENT_NAME) {
         $this->CLIENT_NAME = $CLIENT_NAME;
     }
@@ -41,6 +60,14 @@ class Client{
 
     function setClientPassword($CLIENT_PASSWORD) {
         $this->CLIENT_PASSWORD = $CLIENT_PASSWORD;
+    }
+
+    function setClientRole($CLIENT_ROLE) {
+        $this->CLIENT_ROLE = $CLIENT_ROLE;
+    }
+
+    function setClientFidelity($CLIENT_FIDELITY) {
+        $this->CLIENT_FIDELITY = $CLIENT_FIDELITY;
     }
 
 }

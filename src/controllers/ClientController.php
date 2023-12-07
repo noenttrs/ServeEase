@@ -24,9 +24,14 @@ class ClientController {
         $client->setClientSurname($_POST["clientSurname"]);
         $client->setClientMail($_POST["clientMail"]);
         $client->setClientPassword($_POST["clientPassword"]);
+        $client->setClientRole(0);
+        $client->setClientFidelity(20);
 
         $clientManager = new ClientManager();
         $clientManager->saveClient($client);
+
+        
+        
 
     }
 }
