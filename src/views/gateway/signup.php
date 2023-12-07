@@ -30,12 +30,10 @@ require_once VIEWS . "base/Header.php" ?>
                     <label for="clientRetypePasswordId">Confirmer le mot de passe</label>
                     <i class="fa-solid fa-eye-slash"></i>
                 </div>
-                <input type="submit" value="Créer mon compte">
+                <input type="submit" value="Créer mon compte" class="main__signup__content__form__submit">
             </form>
+            <p class="main__signup__redirectToSignin">Vous avez déjà un compte ? <a href="/signin">Me connecter</a></p>
         </div>
     </section>
     <script src="js/function/inputPasswordSystem.js"></script>
 </main>
-
-
-<?php require_once VIEWS . "base/Footer.php" ?>
