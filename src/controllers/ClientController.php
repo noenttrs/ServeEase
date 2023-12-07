@@ -3,6 +3,7 @@
 namespace ServeEase\controllers;
 
 use ServeEase\models\ClientManager;
+use ServeEase\models\Client;
 class ClientController {
     function __construct() {
 
@@ -13,19 +14,20 @@ class ClientController {
     }
 
     function signup() {
-        $clientName = $_POST["clientName"];
-        $clientSurname = $_POST["clientSurname"];
-        $clientMail = $_POST["clientMail"];
-        $clientPassword = $_POST["clientPassword"];
-        $clientRetypePassword = $_POST["clientRetypePassword"];
 
-        if ($clientPassword == $clientRetypePassword) {
-            $client = new ClientManager();
-            $client->saveClient();
-            header("Location: /");
-        } else {
-            header("Location: /signup");
+        if($_POST["clientPassword"] != $_POST["clientRetypePassword"]) {
+            echo "Les mots de passe ne correspondent pas";
+            return;
         }
+        $client = new Client();
+        $client->setClientName($_POST["clientName"]);
+        $client->setClientSurname($_POST["clientSurname"]);
+        $client->setClientMail($_POST["clientMail"]);
+        $client->setClientPassword($_POST["clientPassword"]);
+
+        $clientManager = new ClientManager();
+        $clientManager->saveClient($client);
+
     }
 }
 ?>
