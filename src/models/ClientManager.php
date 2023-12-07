@@ -28,6 +28,7 @@ class ClientManager {
             "clientRole" => 0,
             "clientFidelity" => 20
         ]);
+        return $query->fetchAll(\PDO::FETCH_CLASS, Client::class);
     }
 
     function connectClient($clientMail, $clientPassword) {
