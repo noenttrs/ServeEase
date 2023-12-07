@@ -7,6 +7,6 @@ require '../vendor/autoload.php';
 //Route appelée pour arriver à la Home page
 $router = new ServeEase\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "MainController@showMain");
-$router->get('/signup', "gateway\SignupController@showSignup");
+$router->get('/signup', "ClientController@showSignup");
 
 $router->run();

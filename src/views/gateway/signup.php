@@ -6,7 +6,7 @@ require_once VIEWS . "base/Header.php" ?>
     <section class="main__signup">
         <img src="img/pexels-oliver-sjöström-1059040.jpg" alt="">
         <form action="/signup" class="main__signup__form" method="post">
-            <div class="main__signup__clientName">
+            <div class="main__signup__clientName autoInputText">
                 <input type="text" name="clientName" id="clientNameId">
                 <label for="clientNameId">Prénom</label>
             </div>

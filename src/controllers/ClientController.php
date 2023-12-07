@@ -1,7 +1,7 @@
 <?php
 
-namespace ServeEase\controllers\gateway;
-class SignupController {
+namespace ServeEase\controllers;
+class ClientController {
     function __construct() {
 
     }
