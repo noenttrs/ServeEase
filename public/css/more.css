@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap")
+}
+
 .autoInputPassword,
 .autoInputText,
 .autoInputTextarea,
@@ -15,7 +20,7 @@
     transition: .3s;
     pointer-events: none;
     box-sizing: border-box;
-    font-family: "Harmonia";
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -50,16 +55,6 @@
     opacity: 0.5;
 }
 
-.autoInputDate label {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    transform: translateY(-50%);
-    font-size: 13px;
-    transition: .3s;
-    pointer-events: none;
-}
-
 .autoInputPassword input:focus~label,
 .autoInputPassword input:not(:placeholder-shown)~label,
 .autoInputText input:focus~label,
@@ -89,6 +84,7 @@
     width: 100%;
     box-sizing: border-box;
     outline: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .autoInputTextarea textarea:disabled {
@@ -145,6 +141,7 @@ select {
     box-sizing: border-box;
     outline: none;
     background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 select:disabled {

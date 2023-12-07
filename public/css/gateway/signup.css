@@ -1,11 +1,26 @@
+@import url("../more.css");
+
 .main__signup {
     display: flex;
     flex-direction: row;
 }
 
 .main__signup img,
-.main__signup form {
+.main__signup__content {
     width: 50%;
+}
+
+.main__signup__content h2 {
+    color: var(--black);
+    text-align: center;
+    font-size: 50px;
+}
+
+.main__signup__content__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
 
 
