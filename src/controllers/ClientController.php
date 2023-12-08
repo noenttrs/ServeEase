@@ -80,7 +80,7 @@ class ClientController {
         }
 
         if(!isset($_POST["clientName"]) || !isset($_POST["clientSurname"]) || !isset($_POST["clientMail"]) || !isset($_POST["clientPassword"]) || !isset($_POST["clientRetypePassword"])) {
-            $clientError = "Veuillez remplir tous les champs";
+            $clientError = true;
             require VIEWS . "gateway/signup.php";
             return;
         }
