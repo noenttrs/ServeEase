@@ -2,13 +2,6 @@
 $pathCss = "css/gateway/signin.css";
 require_once VIEWS . "base/Header.php" ?>
 
-<?php if (isset($_SESSION["client"])) : ?>
-    <script>
-        window.location.href = "/";
-    </script>
-<?php endif; ?>
-
-
 <main>
     <section class="main__signin">
         <img src="img/pexels-oliver-sjöström-1059040.jpg" alt="">
@@ -41,3 +34,5 @@ require_once VIEWS . "base/Header.php" ?>
     </section>
     <script src="js/function/inputPasswordSystem.js"></script>
 </main>
+
+<?php require_once VIEWS . "base/Footer.php" ?>
