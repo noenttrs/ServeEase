@@ -1,16 +1,13 @@
 <?php
-
 namespace ServeEase\controllers;
-use ServeEase\models\ProductManager;
-class MainController {
-    function __construct() {
-        
-    }
 
-    function showMain() {
+use ServeEase\models\ProductManager;
+
+class ProductController {
+
+    public function showProduct() {
         $ProductManager = new ProductManager();
         $ProductManager->recupProduct();
-        require VIEWS . "main.php";
+        require VIEWS . "shop/Product.php";
     }
 }
-?>
