@@ -22,4 +22,7 @@ $router->post('/signin', "ClientController@signin");
 //  Logout
 $router->get('/logout', "ClientController@logout");
 
+// Admin
+$router->get('/admin', "AdminController@showAdmin");
+
 $router->run();
