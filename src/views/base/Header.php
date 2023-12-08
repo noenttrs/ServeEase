@@ -44,8 +44,11 @@ if (session_status() == 1) {
                             </div>
                         </section>
                         <section class="body__header__connexion__myAccount__content">
-                            <a href="" class="body__header__connexion__myAccount__content__parameter">Paramètre</a>
-                            <a href="/" class="body__header__connexion__myAccount__content__order">Mes commandes</a>
+                            <?php if ($_SESSION["client"]["CLIENT_ROLE"] === 1) : ?>
+                                <a href="/admin" class="body__header__connexion__myAccount__content__admin">Administrateur</a>
+                            <?php endif ?>
+                            <a href="/account" class="body__header__connexion__myAccount__content__parameter">Paramètre</a>
+                            <a href="/order" class="body__header__connexion__myAccount__content__order">Mes commandes</a>
                             <a href="/logout" class="body__header__connexion__myAccount__content__logout">Déconnexion</a>
                         </section>
                     </section>

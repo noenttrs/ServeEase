@@ -246,6 +246,7 @@ include_once VIEWS . "base/Header.php"
                     </div>
                 </article>
             </section>
+            <div class="swiper-pagination"></div>
         </section>
     </section>
 
@@ -253,7 +254,12 @@ include_once VIEWS . "base/Header.php"
     <script>
         var swiper = new Swiper(".SwipperVertical", {
             slidesPerView: 4,
-            spaceBetween: 30
+            spaceBetween: 30,
+            rewind: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
         });
     </script>
 </main>
