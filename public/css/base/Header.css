@@ -38,6 +38,7 @@ a {
     justify-content: center;
     gap: 30px;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .body__header__connexion__singin {
