@@ -8,6 +8,6 @@ class ProductController {
     public function showProduct() {
         $ProductManager = new ProductManager();
         $ProductManager->recupProduct();
-        require VIEWS . "shop/Product.php";
+        require VIEWS . "shop/product.php";
     }
 }
