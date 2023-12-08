@@ -8,6 +8,11 @@ $pathCss = "css/gateway/signin.css";
 require VIEWS . "base/header.php";
 ?>
 
+<!-- création d'un produit -->
+
+
+<!-- création d'un menu -->
+
 
 
 <?php require VIEWS . "base/footer.php"; ?>
