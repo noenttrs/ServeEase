@@ -37,16 +37,16 @@ if (session_status() == 1) {
                         <section class="body__header__connexion__myAccount__placeholder">
                             <div class="body__header__connexion__myAccount__left">
                                 <i class="fa-solid fa-user"></i>
-                                <a href="/account">Mon compte</a>
+                                <span>Mon compte</span>
                             </div>
                             <div class="body__header__connexion__myAccount__rigth">
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </section>
                         <section class="body__header__connexion__myAccount__content">
-                            <a href="">Mon compte</a>
-                            <a href="">Mes commandes</a>
-                            <a href="/logout">Déconnexion</a>
+                            <a href="" class="body__header__connexion__myAccount__content__parameter">Paramètre</a>
+                            <a href="/" class="body__header__connexion__myAccount__content__order">Mes commandes</a>
+                            <a href="/logout" class="body__header__connexion__myAccount__content__logout">Déconnexion</a>
                         </section>
                     </section>
                     <div class="body__header__connexion__basket">
@@ -69,4 +69,5 @@ if (session_status() == 1) {
             <?php endif; ?>
         </nav>
     </header>
+    <script src="js/header.js"></script>
 </body>

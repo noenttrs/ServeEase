@@ -50,7 +50,6 @@ a {
     background-color: #fff;
     padding: 10px 20px;
     border-radius: 50px;
-    color: var(--black);
     cursor: pointer;
 }
 
@@ -69,12 +68,82 @@ a {
     cursor: pointer;
 }
 
+.body__header__connexion__basket a,
+.body__header__connexion__singup a {
+    color: #fff;
+    font-size: 18px;
+}
+
 .body__header__connexion__basket:hover,
 .body__header__connexion__singup:hover {
     opacity: 0.8;
 }
 
-.body__header__connexion a {
-    color: #fff;
+.body__header__connexion__myAccount {
+    position: relative;
+}
+
+.body__header__connexion__myAccount__placeholder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.body__header__connexion__myAccount__placeholder a {
+    color: var(--black);
     font-size: 18px;
+}
+
+.body__header__connexion__myAccount__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.body__header__connexion__myAccount__rigth i.active {
+    transform: rotate(180deg);
+}
+
+.body__header__connexion__myAccount__content {
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+    border-radius: 5px;
+    top: 120%;
+}
+
+.body__header__connexion__myAccount__content.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.body__header__connexion__myAccount__content a {
+    transition: all .1s linear;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.body__header__connexion__myAccount__content a:hover {
+    opacity: 0.5;
+}
+
+.body__header__connexion__myAccount__content__parameter,
+.body__header__connexion__myAccount__content__order {
+    color: var(--black);
+}
+
+.body__header__connexion__myAccount__content__logout {
+    color: red;
 }
