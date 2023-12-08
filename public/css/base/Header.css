@@ -139,6 +139,7 @@ a {
     opacity: 0.5;
 }
 
+.body__header__connexion__myAccount__content__admin,
 .body__header__connexion__myAccount__content__parameter,
 .body__header__connexion__myAccount__content__order {
     color: var(--black);

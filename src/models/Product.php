@@ -2,6 +2,6 @@
 
 namespace ServeEase\models;
 
-class Product{
-    
+class Product
+{
 }
