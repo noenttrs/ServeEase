@@ -79,8 +79,8 @@ class ClientController {
             return;
         }
 
-        if(!isset($_POST["clientName"]) || !isset($_POST["clientSurname"]) || !isset($_POST["clientMail"]) || !isset($_POST["clientPassword"]) || !isset($_POST["clientRetypePassword"])) {
-            $clientError = true;
+        if(strlen($_POST["clientName"]) === 0 || strlen($_POST["clientSurname"]) === 0 || strlen($_POST["clientMail"]) === 0 || strlen($_POST["clientPassword"]) === 0 || strlen($_POST["clientRetypePassword"]) === 0) {
+            $signupError = true;
             require VIEWS . "gateway/signup.php";
             return;
         }

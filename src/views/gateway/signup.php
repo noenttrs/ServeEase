@@ -16,7 +16,7 @@ require_once VIEWS . "base/Header.php"; ?>
             <h2>Inscrivez-vous !</h2>
             <form action="/signup" class="main__signup__content__form" method="post">
                 <?php
-                if (isset($clientError)) {
+                if (isset($signupError)) {
                     echo "<div class='main__signup__badRequest'>
                     <p>Veuillez remplir tout les champs</p>
                     </div>";
