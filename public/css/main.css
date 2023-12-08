@@ -8,6 +8,7 @@
     align-items: center;
     gap: 50px;
     margin: 50px 100px;
+    font-weight: 600;
 }
 
 .body__main__presentation__content {
