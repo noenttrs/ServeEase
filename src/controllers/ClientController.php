@@ -61,7 +61,7 @@ class ClientController {
         }
 
         if(!preg_match("#[\W]+#", $clientPasswordValue)) {
-            $clientPassword = "Le mot de passe doit contenir au moins un caractère spécial";
+            $clientPassword = "Le mot de passe doit contenir au moins un caractère spécial (ex: !@#$%^&*)";
             require VIEWS . "gateway/signup.php";
             return;
         }
