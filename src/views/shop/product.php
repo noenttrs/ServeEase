@@ -3,35 +3,29 @@ $pathCss = "css/gateway/signin.css";
 require_once VIEWS . "base/Header.php" ?>
 
 <main>
-    <section class="main__signin">
-        <img src="img/pexels-oliver-sjöström-1059040.jpg" alt="">
-        <div class="main__signin__content">
-            <h2>Connectez vous !</h2>
-            <form action="/signin" class="main__signin__content__form" method="post">
-                <?php
-                if(isset($signinError)) {
-                    echo "<div class='main__signin__badRequest'>
-                    <p>Les informations fournies, que ce soit l'adresse e-mail ou le mot de passe, sont incorrectes. Veuillez réessayer avec des identifiants valides.</p>
-                    </div>";
-                }
-                ?>
-
-                <div class="main__signin__clientMail autoInputText">
-                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " required value="<?php if(isset($clientEmailValue)) echo $clientEmailValue ?>">
-                    <label for="clientMailId">Adresse e-mail</label>
+    <section class="body__main__presentation">
+        <section class="body__main__presentation__image">
+            <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="">
+        </section>
+        <section class="body__main__presentation__content">
+            <h1 class="body__main__presentation__content__name">Menu Best Of™</h1>
+            <p class="body__main__presentation__content__price">17 EUR</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati adipisci neque veritatis similique aliquam nisi delectus minus, laborum veniam magni voluptate doloribus exercitationem eos, dignissimos nemo odio pariatur placeat voluptas!</p>
+            <form action="" class="body__main__presentation__content__addPanerForm" method="post">
+                <div class="body__main__presentation__content__form">
+                    <i class="fa-solid fa-minus"></i>
+                    <span>3</span>
+                    <input type="hidden" value="">
+                    <i class="fa-solid fa-plus"></i>
                 </div>
-                <section class="main__signin__clientPassword">
-                    <div class="inputPassword autoInputPassword">
-                        <input type="password" name="clientPassword" id="clientPasswordId" placeholder=" " required>
-                        <label for="clientPasswordId">Mot de passe</label>
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </div>
-                </section>
-                <input type="submit" value="Me connecter" class="main__signin__content__form__submit">
+                <input type="submit" value="Ajouter un panier">
             </form>
-            <p class="main__signin__redirectToSignin">Vous n'avez pas de compte ? <a href="/signup">M'inscrire</a></p>
-        </div>
+            <form action="" class="body__main__presentation__content__checkoutForm" method="post">
+                <input type="submit" value="Acheter un produit">
+            </form>
+        </section>
     </section>
+
     <script src="js/function/inputPasswordSystem.js"></script>
 </main>
 
