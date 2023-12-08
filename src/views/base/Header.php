@@ -33,12 +33,24 @@ if (session_status() == 1) {
             <!-- cacher le bouton connexion et inscription si l'utilisateur est connecté -->
             <?php if (isset($_SESSION["client"])) : ?>
                 <section class="body__header__connexion">
-                    <div class="body__header__connexion__singin">
-                        <i class="fa-solid fa-user"></i>
-                        <a href="/account">Mon compte</a>
-                    </div>
-                    <div class="body__header__connexion__singup">
-                        <a href="/logout">Déconnexion</a>
+                    <section class="body__header__connexion__myAccount">
+                        <section class="body__header__connexion__myAccount__placeholder">
+                            <div class="body__header__connexion__myAccount__left">
+                                <i class="fa-solid fa-user"></i>
+                                <a href="/account">Mon compte</a>
+                            </div>
+                            <div class="body__header__connexion__myAccount__rigth">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </section>
+                        <section class="body__header__connexion__myAccount__content">
+                            <a href="">Mon compte</a>
+                            <a href="">Mes commandes</a>
+                            <a href="/logout">Déconnexion</a>
+                        </section>
+                    </section>
+                    <div class="body__header__connexion__basket">
+                        <a href="/basket">Mon panier</a>
                     </div>
                 </section>
             <?php endif; ?>

@@ -59,6 +59,7 @@ a {
     font-size: 18px;
 }
 
+.body__header__connexion__basket,
 .body__header__connexion__singup {
     background-color: var(--black);
     padding: 10px 20px;
@@ -68,11 +69,12 @@ a {
     cursor: pointer;
 }
 
+.body__header__connexion__basket:hover,
 .body__header__connexion__singup:hover {
     opacity: 0.8;
 }
 
-.body__header__connexion__singup a {
+.body__header__connexion a {
     color: #fff;
     font-size: 18px;
 }
