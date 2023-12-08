@@ -18,7 +18,6 @@ class ClientManager {
         $clientSurname = $client->getClientSurname();
         $clientMail = $client->getClientMail();
         $clientPassword = $client->getClientPassword();
-
         $query = $this->db->prepare("INSERT INTO client (CLIENT_NAME, CLIENT_SURNAME, CLIENT_MAIL, CLIENT_PASSWORD, CLIENT_ROLE, CLIENT_FIDELITY) VALUES (:clientName, :clientSurname, :clientMail, :clientPassword, :clientRole, :clientFidelity)");
         $query->execute([
             "clientName" => $clientName,
@@ -36,16 +35,13 @@ class ClientManager {
         $query->execute([
             "clientMail" => $clientMail
         ]);
-        return $query->fetchAll(\PDO::FETCH_CLASS, Client::class);
+        return $query->fetchObject(Client::class);
     }
 
     function connectClient($clientMail, $clientPassword) {
-        $query = $this->db->prepare("SELECT * INTO (CLIENT_NAME, CLIENT_SURNAME, CLIENT_MAIL, CLIENT_PASSWORD, CLIENT_ROLE, CLIENT_FIDELITY) VALUES (:clientMail, :clientPassword)");
-        $query->execute([
-            "clientMail" => $clientMail,
-            "clientPassword" => $clientPassword
-        ]);
-        return $query->fetchAll(\PDO::FETCH_CLASS, Client::class);
+        $getAccount = $this->verifyClientMail($clientMail);
+        if($getAccount && password_verify($clientPassword, $getAccount->getClientPassword())) return $getAccount;
+        else return false;
     }
 
 }

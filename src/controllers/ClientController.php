@@ -83,32 +83,31 @@ class ClientController {
         $client->setClientName($_POST["clientName"]);
         $client->setClientSurname($_POST["clientSurname"]);
         $client->setClientMail($_POST["clientMail"]);
-        $client->setClientPassword($_POST["clientPassword"]);
+        $client->setClientPassword(password_hash($_POST["clientPassword"], PASSWORD_DEFAULT));
         $client->setClientRole(0);
         $client->setClientFidelity(20);
-
         $clientManager = new ClientManager();
-
-        if($clientManager->verifyClientMail($client->getClientMail()) > 0) {
+        if($clientManager->verifyClientMail($client->getClientMail())) {
             $clientMail = "L'adresse mail est déjà utilisée";
             require VIEWS . "gateway/signup.php";
             return;
         }
         $clientManager->saveClient($client);
 
-        $_SESSION["client"] = $client->session();
+        $client->setSession();
         header("Location: /");
     }
 
     function signin(){
         $clientManager = new ClientManager();
         $client = $clientManager->connectClient($_POST["clientMail"], $_POST["clientPassword"]);
-        $isValidClient = count($client);
-        if($isValidClient < 1) {
-            echo "Le compte n'existe pas";
+        if($client === false) {
+            $clientEmailValue = $_POST["clientMail"];
+            $signinError = true;
+            require VIEWS . "gateway/signin.php";
             return;
         } 
-        // $_SESSION["client"] = $isValidClient->session();
+        $client->setSession();
         header("Location: /");
     }
     

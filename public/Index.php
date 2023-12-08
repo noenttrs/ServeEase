@@ -13,14 +13,13 @@ $router->get('/', "MainController@showMain");
 
 // Signup
 $router->get('/signup', "ClientController@showSignup");
-$router->get('/logout', "ClientController@logout");
-
-
-
 $router->post('/signup', "ClientController@signup");
 
 // Signing 
 $router->get('/signin', "ClientController@showSignin");
 $router->post('/signin', "ClientController@signin");
+
+//  Logout
+$router->get('/logout', "ClientController@logout");
 
 $router->run();

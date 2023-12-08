@@ -87,15 +87,15 @@ class Client
     }
 
 
-    function session()
+    function setSession()
     {
         //return un object client en session
-        return [
-            "CLIENT_ID" => $this->CLIENT_ID,
-            "CLIENT_NAME" => $this->CLIENT_NAME,
-            "CLIENT_SURNAME" => $this->CLIENT_SURNAME,
-            "CLIENT_MAIL" => $this->CLIENT_MAIL,
-            "CLIENT_ROLE" => $this->CLIENT_ROLE
+        $_SESSION["client"] = [
+            "CLIENT_ID" => $this->getClientId(),
+            "CLIENT_NAME" => $this->getClientName(),
+            "CLIENT_SURNAME" => $this->getClientSurname(),
+            "CLIENT_MAIL" => $this->getClientMail(),
+            "CLIENT_ROLE" => $this->getClientRole()
         ];
     }
 }

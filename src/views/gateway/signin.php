@@ -15,11 +15,16 @@ require_once VIEWS . "base/Header.php" ?>
         <div class="main__signin__content">
             <h2>Connectez vous !</h2>
             <form action="/signin" class="main__signin__content__form" method="post">
-                <div class="main__signin__badRequest">
+                <?php
+                if(isset($signinError)) {
+                    echo "<div class='main__signin__badRequest'>
                     <p>Les informations fournies, que ce soit l'adresse e-mail ou le mot de passe, sont incorrectes. Veuillez réessayer avec des identifiants valides.</p>
-                </div>
+                    </div>";
+                }
+                ?>
+
                 <div class="main__signin__clientMail autoInputText">
-                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " required>
+                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " required value="<?php if(isset($clientEmailValue)) echo $clientEmailValue ?>">
                     <label for="clientMailId">Adresse e-mail</label>
                 </div>
                 <section class="main__signin__clientPassword">
