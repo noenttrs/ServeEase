@@ -6,7 +6,6 @@ require_once VIEWS . "base/Header.php"; ?>
 }
 ?>
 
-
 <main>
 
 </main>

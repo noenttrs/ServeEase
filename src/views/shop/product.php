@@ -83,7 +83,8 @@ require_once VIEWS . "base/Header.php" ?>
                 <div class="body__main__presentation__content__addPanerForm__inputQuantity">
                     <i class="fa-solid fa-minus body__main__presentation__content__addPanerForm__inputQuantity__minus"></i>
                     <span class="body__main__presentation__content__addPanerForm__inputQuantity__placeholder">1</span>
-                    <input type="hidden" value="">
+                    <input type="hidden" value="" name="addBasketQuantity">
+                    <input type="hidden" value="" name="productId">
                     <i class="fa-solid fa-plus body__main__presentation__content__addPanerForm__inputQuantity__plus"></i>
                 </div>
                 <input type="submit" value="Ajouter un panier" class="body__main__presentation__content__addPanerForm__inputSubmit">

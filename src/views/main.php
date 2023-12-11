@@ -11,9 +11,7 @@ include_once VIEWS . "base/Header.php"
             <p class="body__main__presentation__p">Découvrez notre système sophistiqué en scannant le code QR sur votre table pour choisir votre plat avec précision via une interface moderne et intuitive.</p>
             <a href="" class="body__main__presentation__a">En savoir plus</a>
         </section>
-        <section class="body__main__presentation__image">
-            <img src="img/burger.png" alt="burger.png">
-        </section>
+        <img class="body__main__presentation__image" src="img/burger.png" alt="burger.png">
     </section>
 
     <section class="body__main__trend">
@@ -255,7 +253,6 @@ include_once VIEWS . "base/Header.php"
         var swiper = new Swiper(".SwipperVertical", {
             slidesPerView: 4,
             spaceBetween: 30,
-            rewind: true,
         });
     </script>
 </main>
