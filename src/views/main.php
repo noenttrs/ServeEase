@@ -16,72 +16,70 @@ include_once VIEWS . "base/Header.php"
 
     <section class="body__main__trend">
         <h2 class="body__main__h2">Nos tendances</h2>
-        <section class="swiper SwipperVertical">
-            <section class="body__main__managerWithSwipper swiper-wrapper">
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="img/burger.png" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-            </section>
+        <section class="body__main__managerWithSwipper">
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
         </section>
     </section>
 
@@ -178,83 +176,80 @@ include_once VIEWS . "base/Header.php"
 
     <section class="body__main__burger">
         <h2 class="body__main__h2">Nos burgers</h2>
-        <section class="swiper SwipperVertical">
-            <section class="body__main__managerWithSwipper swiper-wrapper">
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="img/burger.png" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-                <article class="body__main__container swiper-slide">
-                    <div class="body__main__container__image">
-                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                    </div>
-                    <div class="body__main__container__content">
-                        <p>Menu Best Of™</p>
-                        <p>18,00 €</p>
-                    </div>
-                </article>
-            </section>
-            <div class="swiper-pagination"></div>
+        <section class="body__main__managerWithSwipper">
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
+            <article class="body__main__container swiper-slide">
+                <div class="body__main__container__image">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+                </div>
+                <div class="body__main__container__content">
+                    <p>Menu Best Of™</p>
+                    <p>18,00 €</p>
+                </div>
+            </article>
         </section>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".SwipperVertical", {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 30,
         });
-    </script>
+    </script> -->
 </main>
 
 <?php
