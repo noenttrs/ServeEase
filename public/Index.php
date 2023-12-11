@@ -24,9 +24,10 @@ $router->get('/logout', "ClientController@logout");
 
 // Shop
 $router->get('/product', "ProductController@showProduct");
+$router->post('/product', "ProductController@addBasket");
 
-// add basket
-$router->post('/addBasket', "ProductController@addBasket");
+// Basket
+$router->post('/basket', "ClientController@showBasket");
 
 // Admin
 $router->get('/admin', "AdminController@showAdmin");

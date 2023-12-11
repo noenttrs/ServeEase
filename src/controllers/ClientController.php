@@ -9,6 +9,10 @@ class ClientController {
 
     }
 
+    function showBasket() {
+        require VIEWS . "account/basket.php";
+    }
+
     function showSignup() {
         require VIEWS . "gateway/signup.php";
     }
