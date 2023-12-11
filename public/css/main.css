@@ -111,6 +111,7 @@
 .body__main__separation {
     padding: 100px;
     background-image: url("/img/pexels-valeria-boltneva-1639557.jpg");
+    background-attachment: fixed;
     background-size: cover;
     height: 400px;
 }
