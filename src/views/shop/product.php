@@ -79,7 +79,7 @@ require_once VIEWS . "base/Header.php" ?>
                     </section>
                 </section>
             </section>
-            <form action="" class="body__main__presentation__content__addPanerForm" method="post">
+            <form action="/product" class="body__main__presentation__content__addPanerForm" method="post">
                 <div class="body__main__presentation__content__addPanerForm__inputQuantity">
                     <i class="fa-solid fa-minus"></i>
                     <span>1</span>
