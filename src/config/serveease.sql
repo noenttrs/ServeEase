@@ -58,7 +58,8 @@ CREATE TABLE `order` (
   `ORDER_ID` int(11) NOT NULL,
   `TABLE_ID` int(3) NOT NULL,
   `CLIENT_ID` int(11) NOT NULL,
-  `ORDER_DATE` datetime DEFAULT NULL
+  `ORDER_DATE` datetime DEFAULT NULL,
+  `ORDER_STATUS` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
