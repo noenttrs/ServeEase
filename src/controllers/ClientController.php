@@ -10,6 +10,11 @@ class ClientController {
     }
 
     function showBasket() {
+        foreach($_SESSION["basket"]["productItem"] as $productItem) {
+            $product = $productManager->getProduct($productItem[0]);
+            $product->setProductQuantity($productItem[1]);
+            $basket[] = $product;
+        }
         require VIEWS . "account/basket.php";
     }
 

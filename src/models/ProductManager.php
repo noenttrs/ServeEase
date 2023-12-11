@@ -13,7 +13,7 @@ class ProductManager
         $this->db = new \PDO('mysql:host=' . HOST . ';dbname=' . DATABASE, USER, PASSWORD);
     }
 
-    public function recupProduct()
+    public function getProduct()
     {
         $query = $this->db->prepare("SELECT * FROM product");
         $query->execute();

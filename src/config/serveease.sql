@@ -58,7 +58,8 @@ CREATE TABLE `order` (
   `ORDER_ID` int(11) NOT NULL,
   `TABLE_ID` int(3) NOT NULL,
   `CLIENT_ID` int(11) NOT NULL,
-  `ORDER_DATE` datetime DEFAULT NULL
+  `ORDER_DATE` datetime DEFAULT NULL,
+  `ORDER_STATUS` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -83,6 +84,7 @@ CREATE TABLE `order_item` (
 CREATE TABLE `product` (
   `PRODUCT_ID` int(7) NOT NULL,
   `PRODUCT_TYPE_MENU` tinyint(4) DEFAULT NULL,
+  `PRODUCT_NAME` varchar(16) DEFAULT NULL,
   `PRODUCT_IMAGE` varchar(64) DEFAULT NULL,
   `PRODUCT_DESCRIPTION` longtext DEFAULT NULL,
   `PRODUCT_ALLERGEN` varchar(128) DEFAULT NULL,
