@@ -1,0 +1,67 @@
+.body__main__presentation {
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    color: var(--black);
+}
+
+.body__main__presentation__image {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.body__main__presentation__content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body__main__presentation__content__name {
+    font-size: 80px;
+}
+
+.body__main__presentation__content__price,
+.body__main__presentation__content__description {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.body__main__presentation__content__addPanerForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.body__main__presentation__content__addPanerForm__inputQuantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    font-size: 18px;
+    height: 50px;
+}
+
+.body__main__presentation__content__addPanerForm__inputQuantity i {
+    cursor: pointer;
+}
+
+.body__main__presentation__content__addPanerForm__inputSubmit {
+    background-color: var(--black);
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
