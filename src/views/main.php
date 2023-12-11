@@ -256,10 +256,6 @@ include_once VIEWS . "base/Header.php"
             slidesPerView: 4,
             spaceBetween: 30,
             rewind: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
         });
     </script>
 </main>

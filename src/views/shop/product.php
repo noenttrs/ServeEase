@@ -38,6 +38,46 @@ require_once VIEWS . "base/Header.php" ?>
                         </p>
                     </section>
                 </section>
+                <section class="body__main__presentation__content__select__description">
+                    <section class="body__main__presentation__content__select__description__placeholder">
+                        <div class="body__main__presentation__content__select__description__placeholder__left">
+                            <i class="fa-solid fa-list"></i>
+                            <p>Caractéristique du produit</p>
+                        </div>
+                        <div class="body__main__presentation__content__select__description__placeholder__rigth">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </section>
+                    <section class="body__main__presentation__content__select__description__content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Atque, molestias? Dolores ratione assumenda architecto nam quod atque officia recusandae harum enim, labore maxime magnam dolore in ex totam delectus pariatur.
+                            Odit corrupti, nemo explicabo nesciunt dolore tempora optio molestias similique! Atque velit mollitia illum a cumque totam libero error vel, adipisci ad voluptates perspiciatis!
+                            Quae numquam nam officiis quas assumenda dicta, ipsum enim aut facilis eos, cupiditate quibusdam cum provident blanditiis, distinctio fuga incidunt necessitatibus veniam illum dolor.
+                            Eos excepturi, dignissimos culpa hic sequi quaerat, a delectus illum qui error placeat voluptates consequuntur molestias at eum quas. Esse, hic at.
+                        </p>
+                    </section>
+                </section>
+                <section class="body__main__presentation__content__select__description">
+                    <section class="body__main__presentation__content__select__description__placeholder">
+                        <div class="body__main__presentation__content__select__description__placeholder__left">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <p>Histoire du produit</p>
+                        </div>
+                        <div class="body__main__presentation__content__select__description__placeholder__rigth">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </section>
+                    <section class="body__main__presentation__content__select__description__content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Atque, molestias? Dolores ratione assumenda architecto nam quod atque officia recusandae harum enim, labore maxime magnam dolore in ex totam delectus pariatur.
+                            Odit corrupti, nemo explicabo nesciunt dolore tempora optio molestias similique! Atque velit mollitia illum a cumque totam libero error vel, adipisci ad voluptates perspiciatis!
+                            Quae numquam nam officiis quas assumenda dicta, ipsum enim aut facilis eos, cupiditate quibusdam cum provident blanditiis, distinctio fuga incidunt necessitatibus veniam illum dolor.
+                            Eos excepturi, dignissimos culpa hic sequi quaerat, a delectus illum qui error placeat voluptates consequuntur molestias at eum quas. Esse, hic at.
+                        </p>
+                    </section>
+                </section>
             </section>
             <form action="" class="body__main__presentation__content__addPanerForm" method="post">
                 <div class="body__main__presentation__content__addPanerForm__inputQuantity">
@@ -50,7 +90,7 @@ require_once VIEWS . "base/Header.php" ?>
             </form>
         </section>
     </section>
-
+    <script src="js/shop/productSelect.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".ImageSwipper", {
