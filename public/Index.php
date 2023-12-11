@@ -27,6 +27,7 @@ $router->get('/product', "ProductController@showProduct");
 $router->post('/product', "ProductController@addBasket");
 
 // Basket
+$router->get('/product', "ProductController@addBakset");
 $router->get('/basket', "ClientController@showBasket");
 
 // Admin
