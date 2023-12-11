@@ -25,6 +25,10 @@
     font-size: 80px;
 }
 
+.body__main__presentation__content__price {
+    font-weight: 800;
+}
+
 .body__main__presentation__content__price,
 .body__main__presentation__content__description {
     font-size: 20px;
