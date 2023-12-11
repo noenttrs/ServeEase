@@ -55,7 +55,7 @@ require VIEWS . "base/header.php";
 
 <!-- surveillance des commandes -- recherche des commandes -->
 
-<form action="/admin" method="post">
+<form action="/searchCommand" method="post">
     <div>
         <label for="orderSearch"></label>
         <input type="text" name="orderSearch" id="orderSearch" placeholder="Rechercher une commande">
@@ -67,7 +67,7 @@ require VIEWS . "base/header.php";
 
 <!-- surveillance des clients -- recherche de clients -->
 
-<form action="/admin" method="post">
+<form action="/searchClient" method="post">
     <div>
         <label for="clientSearch"></label>
         <input type="text" name="clientSearch" id="clientSearch" placeholder="Rechercher un client">
