@@ -81,16 +81,17 @@ require_once VIEWS . "base/Header.php" ?>
             </section>
             <form action="/product" class="body__main__presentation__content__addPanerForm" method="post">
                 <div class="body__main__presentation__content__addPanerForm__inputQuantity">
-                    <i class="fa-solid fa-minus"></i>
-                    <span>1</span>
+                    <i class="fa-solid fa-minus body__main__presentation__content__addPanerForm__inputQuantity__minus"></i>
+                    <span class="body__main__presentation__content__addPanerForm__inputQuantity__placeholder">1</span>
                     <input type="hidden" value="">
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus body__main__presentation__content__addPanerForm__inputQuantity__plus"></i>
                 </div>
                 <input type="submit" value="Ajouter un panier" class="body__main__presentation__content__addPanerForm__inputSubmit">
             </form>
         </section>
     </section>
     <script src="js/shop/productSelect.js"></script>
+    <script src="js/shop/productQuantity.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".ImageSwipper", {

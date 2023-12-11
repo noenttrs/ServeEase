@@ -2,11 +2,10 @@
 $pathCss = "css/gateway/signin.css";
 require_once VIEWS . "base/Header.php" ?>
 
-<?php if (isset($_SESSION["client"])) : ?>
-    <script>
-        window.location.href = "/";
-    </script>
-<?php endif; ?>
+<?php if (isset($_SESSION["client"])) {
+    header("Location: /");
+}
+?>
 
 
 <main>
@@ -16,7 +15,7 @@ require_once VIEWS . "base/Header.php" ?>
             <h2>Connectez vous !</h2>
             <form action="/signin" class="main__signin__content__form" method="post">
                 <?php
-                if(isset($signinError)) {
+                if (isset($signinError)) {
                     echo "<div class='main__signin__badRequest'>
                     <p>Les informations fournies, que ce soit l'adresse e-mail ou le mot de passe, sont incorrectes. Veuillez réessayer avec des identifiants valides.</p>
                     </div>";
@@ -24,7 +23,7 @@ require_once VIEWS . "base/Header.php" ?>
                 ?>
 
                 <div class="main__signin__clientMail autoInputText">
-                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " required value="<?php if(isset($clientEmailValue)) echo $clientEmailValue ?>">
+                    <input type="email" name="clientMail" id="clientMailId" placeholder=" " required value="<?php if (isset($clientEmailValue)) echo $clientEmailValue ?>">
                     <label for="clientMailId">Adresse e-mail</label>
                 </div>
                 <section class="main__signin__clientPassword">

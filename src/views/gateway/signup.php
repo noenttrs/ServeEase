@@ -2,11 +2,10 @@
 $pathCss = "css/gateway/signup.css";
 require_once VIEWS . "base/Header.php"; ?>
 
-<?php if (isset($_SESSION["client"])) : ?>
-    <script>
-        window.location.href = "/";
-    </script>
-<?php endif; ?>
+<?php if (isset($_SESSION["client"])) {
+    header("Location: /");
+}
+?>
 
 
 <main>
