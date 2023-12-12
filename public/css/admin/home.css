@@ -23,21 +23,31 @@ main {
     margin: 50px 100px;
 }
 
-.body__main__createProductAndMenu {
+.body__main__createProductAndMenu,
+.body__main__findOrderAndClient {
     display: flex;
     flex-direction: row;
     gap: 100px;
 }
 
 .body__main__createProductAndMenu__createProduct__h2,
-.body__main__createProductAndMenu__createMenu__h2 {
+.body__main__createProductAndMenu__createMenu__h2,
+.body__main__findOrderAndClient__order__h2,
+.body__main__findOrderAndClient__client__h2 {
     color: var(--black);
     font-size: 50px;
     margin-bottom: 50px;
 }
 
+.body__main__findOrderAndClient__order__h2,
+.body__main__findOrderAndClient__client__h2 {
+    margin-top: 100px;
+}
+
 .body__main__createProductAndMenu__createProduct,
-.body__main__createProductAndMenu__createMenu {
+.body__main__createProductAndMenu__createMenu,
+.body__main__findOrderAndClient__order,
+.body__main__findOrderAndClient__client {
     width: 100%;
 }
 
@@ -46,6 +56,34 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.body__main__createProductAndMenu__createProduct__form__productPrice,
+.body__main__createProductAndMenu__createMenu__form__menuPrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    border-radius: 5px;
+}
+
+.body__main__createProductAndMenu__createProduct__form__productPrice input,
+.body__main__createProductAndMenu__createMenu__form__menuPrice input {
+    border: none;
+}
+
+.body__main__createProductAndMenu__createProduct__form__productPrice i,
+.body__main__createProductAndMenu__createMenu__form__menuPrice i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    text-align: center;
+    height: 60px;
+    width: 80px;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    font-size: 18px;
 }
 
 .body__main__createProductAndMenu__createProduct__form__submit,
@@ -63,4 +101,44 @@ main {
 .body__main__createProductAndMenu__createProduct__form__submit:hover,
 .body__main__createProductAndMenu__createMenu__form__submit:hover {
     transform: translateY(-5px);
+}
+
+.body__main__findOrderAndClient__order__form__orderSearch,
+.body__main__findOrderAndClient__client__form__orderSearch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    border-radius: 5px;
+}
+
+.body__main__findOrderAndClient__order__form__orderSearch button,
+.body__main__findOrderAndClient__client__form__orderSearch button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    height: 60px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    width: 80px;
+    font-size: 18px;
+}
+
+.body__main__findOrderAndClient__order__form__orderSearch input,
+.body__main__findOrderAndClient__client__form__orderSearch input {
+    border: none;
+}
+
+.body__main__redirectToKitchen {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    color: var(--black);
+    font-size: 18px;
+    padding: 50px;
+    border-radius: 5px;
 }

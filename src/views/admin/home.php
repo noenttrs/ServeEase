@@ -23,6 +23,7 @@ require VIEWS . "base/header.php";
                 </div>
                 <div class="body__main__createProductAndMenu__createProduct__form__productPrice autoInputText">
                     <input type="number" name="productPrice" id="productPriceId" placeholder=" " required>
+                    <i class="fa-solid fa-euro-sign"></i>
                     <label for="productPriceId">Prix du produit</label>
                 </div>
                 <div class="body__main__createProductAndMenu__createProduct__form__productImage">
@@ -40,11 +41,12 @@ require VIEWS . "base/header.php";
                     <label for="menuNameId">Nom du menu</label>
                 </div>
                 <div class="body__main__createProductAndMenu__createMenu__form__menuDescription autoInputTextarea">
-                <textarea name="menuDescription" id="menuDescriptionId" cols="30" rows="10" placeholder=" " required></textarea>
+                    <textarea name="menuDescription" id="menuDescriptionId" cols="30" rows="10" placeholder=" " required></textarea>
                     <label for="menuDescriptionId">Description du menu</label>
                 </div>
                 <div class="body__main__createProductAndMenu__createMenu__form__menuPrice autoInputText">
                     <input type="number" name="menuPrice" id="menuPriceId" placeholder=" " required>
+                    <i class="fa-solid fa-euro-sign"></i>
                     <label for="menuPriceId">Prix du menu</label>
                 </div>
                 <div class="body__main__createProductAndMenu__createMenu__form__menuImage">
@@ -70,36 +72,36 @@ require VIEWS . "base/header.php";
                 })
         </script>
     </section>
+    <section class="body__main__findOrderAndClient">
+        <section class="body__main__findOrderAndClient__order">
+            <h2 class="body__main__findOrderAndClient__order__h2">Recherche d'un produit</h2>
+            <form action="/searchCommand" method="post" class="body__main__findOrderAndClient__order__form">
+                <div class="body__main__findOrderAndClient__order__form__orderSearch autoInputText">
+                    <input type="text" name="orderSearch" id="orderSearchId" placeholder=" ">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <label for="orderSearchId">Recherche d'un produit</label>
+                </div>
+            </form>
+        </section>
+        <section class="body__main__findOrderAndClient__client">
+            <h2 class="body__main__findOrderAndClient__client__h2">Recherche d'un client</h2>
+            <form action="/searchCommand" method="post" class="body__main__findOrderAndClient__client__form">
+                <div class="body__main__findOrderAndClient__client__form__orderSearch autoInputText">
+                    <input type="text" name="orderSearch" id="orderSearchId" placeholder=" " required>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <label for="orderSearchId">Recherche d'un produit</label>
+                </div>
+            </form>
+        </section>
+    </section>
+
+
+    <a href="/kitchen" class="body__main__redirectToKitchen">Cliquez ici pour accédez au pannel de cuisine</a>
 </main>
-
-<!-- surveillance des commandes -- recherche des commandes -->
-
-<form action="/searchCommand" method="post">
-    <div>
-        <label for="orderSearch"></label>
-        <input type="text" name="orderSearch" id="orderSearch" placeholder="Rechercher une commande">
-    </div>
-
-    <input type="submit" value="Rechercher">
-</form>
-
-
-<!-- surveillance des clients -- recherche de clients -->
-
-<form action="/searchClient" method="post">
-    <div>
-        <label for="clientSearch"></label>
-        <input type="text" name="clientSearch" id="clientSearch" placeholder="Rechercher un client">
-    </div>
-
-    <input type="submit" value="Rechercher">
-</form>
-
-
-
-
-<!-- pannel cuisine -- redirect to the kitchen's panel -->
-<a href="/kitchen">Pannel cuisine</a>
 
 
 
