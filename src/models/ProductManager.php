@@ -13,10 +13,20 @@ class ProductManager
         $this->db = new \PDO('mysql:host=' . HOST . ';dbname=' . DATABASE, USER, PASSWORD);
     }
 
-    public function getProduct()
+    public function getAll()
     {
         $query = $this->db->prepare("SELECT * FROM product");
         $query->execute();
         return $query->fetchAll(\PDO::FETCH_CLASS, Product::class);
+    }
+
+    public function getProductById($id)
+    {
+        echo $id;
+        $query = $this->db->prepare("SELECT * FROM product WHERE PRODUCT_ID = ?");  
+        $query->execute(
+          [$id] 
+        );
+        return $query->fetchObject(Product::class);
     }
 }

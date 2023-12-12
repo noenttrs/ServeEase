@@ -9,7 +9,7 @@ class MainController {
 
     function showMain() {
         $ProductManager = new ProductManager();
-        $ProductManager->getProduct();
+        $ProductManager->getAll();
         require VIEWS . "main.php";
     }
 }
