@@ -93,7 +93,7 @@ require VIEWS . "base/header.php";
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <label for="orderSearchId">Rechercher un client</label>
+                    <label for="orderSearchId">Rechercher un client par email</label>
                 </div>
             </form>
         </section>

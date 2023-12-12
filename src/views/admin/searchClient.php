@@ -38,8 +38,16 @@ echo "<h1>Client trouvé</h1>";
                 <label for="clientPasswordId">Mot de passe du client</label>
             </div>
             <div class="">
-                <input type="number" name="clientFidelity" id="clientFidelityId" placeholder="Change fidelity point" required>
+                <input type="number" name="clientFidelity" id="clientFidelityId" value=<?php echo $client->getClientFidelity() ?> required>
                 <label for="clientFidelityId">Fidélité du client</label>
+            </div>
+            <div>
+                <select name="clientRole" id="clientRoleId">
+                    <option value="0">Client</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Cuisine</option>
+                </select>
+                <label for="clientRoleId">Rôle du client</label>
             </div>
             <input type="submit" value="Modifier le client" class="">
 
