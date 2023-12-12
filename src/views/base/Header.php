@@ -15,6 +15,7 @@ if (session_status() == 1) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/38e38eb36a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/more.css">
     <link rel="stylesheet" href="css/base/Header.css">
     <link rel="stylesheet" href="css/base/Footer.css">
@@ -102,13 +103,15 @@ if (session_status() == 1) {
                 </section>
                 <menu>
                     <section class="body__header__menu">
-                        <div class="body__header__menu__signin">
-                            <i class="fa-solid fa-user"></i>
-                            <a href="/signin">Connexion</a>
-                        </div>
-                        <div class="body__header__menu__signup">
-                            <a href="/signup">Inscription</a>
-                        </div>
+                        <section class="body__header__menu__up">
+                            <div class="body__header__menu__signin">
+                                <i class="fa-solid fa-user"></i>
+                                <a href="/signin">Connexion</a>
+                            </div>
+                            <div class="body__header__menu__signup">
+                                <a href="/signup">Inscription</a>
+                            </div>
+                        </section>
                     </section>
                 </menu>
             <?php endif; ?>

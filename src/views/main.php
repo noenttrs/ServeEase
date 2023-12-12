@@ -89,65 +89,65 @@ include_once VIEWS . "base/Header.php"
     <section class="body__main__menu">
         <h2 class="body__main__h2">Nos Menus</h2>
         <section class="body__main__managerWithGrid">
-            <article class="body__main__container">
-                <div class="body__main__container__image">
+            <article class="body__main__containerGrid">
+                <div class="body__main__containerGrid__image">
                     <img src="img/burger.png" alt="BO_MCFIRST.webp">
                 </div>
-                <div class="body__main__container__content">
+                <div class="body__main__containerGrid__image__content">
                     <p>Menu Best Of™</p>
                     <p>18,00 €</p>
                 </div>
             </article>
-            <article class="body__main__container">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+            <article class="body__main__containerGrid">
+                <div class="body__main__containerGrid__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
                 </div>
-                <div class="body__main__container__content">
+                <div class="body__main__containerGrid__image__content">
                     <p>Menu Best Of™</p>
                     <p>18,00 €</p>
                 </div>
             </article>
-            <article class="body__main__container">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+            <article class="body__main__containerGrid">
+                <div class="body__main__containerGrid__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
                 </div>
-                <div class="body__main__container__content">
+                <div class="body__main__containerGrid__image__content">
                     <p>Menu Best Of™</p>
                     <p>18,00 €</p>
                 </div>
             </article>
-            <article class="body__main__container">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+            <article class="body__main__containerGrid">
+                <div class="body__main__containerGrid__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
                 </div>
-                <div class="body__main__container__content">
+                <div class="body__main__containerGrid__image__content">
                     <p>Menu Best Of™</p>
                     <p>18,00 €</p>
                 </div>
             </article>
-            <article class="body__main__container">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+            <article class="body__main__containerGrid">
+                <div class="body__main__containerGrid__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
                 </div>
-                <div class="body__main__container__content">
+                <div class="body__main__containerGrid__image__content">
                     <p>Menu Best Of™</p>
                     <p>18,00 €</p>
                 </div>
             </article>
-            <article class="body__main__container">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+            <article class="body__main__containerGrid">
+                <div class="body__main__containerGrid__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
                 </div>
-                <div class="body__main__container__content">
+                <div class="body__main__containerGrid__image__content">
                     <p>Menu Best Of™</p>
                     <p>18,00 €</p>
                 </div>
             </article>
-            <article class="body__main__container">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
+            <article class="body__main__containerGrid">
+                <div class="body__main__containerGrid__image">
+                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
                 </div>
-                <div class="body__main__container__content">
+                <div class="body__main__containerGrid__image__content">
                     <p>Menu Best Of™</p>
                     <p>18,00 €</p>
                 </div>
