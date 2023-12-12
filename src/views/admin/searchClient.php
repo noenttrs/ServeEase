@@ -8,7 +8,7 @@ if (!isset($client)){
     header("Location: /admin");
 }
 
-$pathCss = "css/admin/home.css";
+$pathCss = "css/admin/searchClient.css";
 require VIEWS . "base/header.php";
 
 echo "<h1>Client trouvé</h1>";
@@ -17,6 +17,7 @@ echo "<h1>Client trouvé</h1>";
 <!-- Formulaire de modification du client / supression du client -->
 
 <main>
+    <section class="body__main__searchClient"></section>
     <section class="">
         <h2 class=""><?php echo $client->getClientName() . ' ' . $client->getClientSurname() ?></h2>
 
@@ -49,6 +50,7 @@ echo "<h1>Client trouvé</h1>";
                 </select>
                 <label for="clientRoleId">Rôle du client</label>
             </div>
+            <input type="hidden" name="clientId" value="<?php echo $client->getClientId() ?>">
             <input type="submit" value="Modifier le client" class="">
 
     </section>
