@@ -136,7 +136,7 @@ main {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid var(--black);
     color: var(--black);
     font-size: 18px;
     padding: 50px;
