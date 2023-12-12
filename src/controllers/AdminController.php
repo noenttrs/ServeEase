@@ -19,6 +19,16 @@ class AdminController
         require VIEWS . "admin/home.php";
     }
 
+    function searchClient()
+    {
+        if($_SESSION['client']['CLIENT_ROLE'] !== 1){
+            header("Location: /");
+            exit();
+        }
+        $client = $this->adminManager->searchClient($_POST["clientSearch"]);
+        require VIEWS . "admin/searchClient.php";
+    }
+
     public function index()
     {
         // TODO: Implement index method

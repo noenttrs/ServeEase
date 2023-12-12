@@ -32,6 +32,6 @@ $router->get('/basket', "ProductController@showBasket");
 
 // Admin
 $router->get('/admin', "AdminController@showAdmin");
-$router->get('/searchClient', "AdminController@searchClient");
+$router->post('/searchClient', "AdminController@searchClient");
 
 $router->run();
