@@ -1,2 +1,54 @@
 @import url("../more.css");
 
+.body__main__searchClient {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body__main__searchClient__h1 {
+    font-size: 80px;
+    color: var(--black);
+    margin: 100px 0 50px 0;
+}
+
+.body__main__searchClient__p {
+    font-size: 18px;
+    color: var(--black);
+}
+
+.body__main__searchClient__form {
+    margin: 50px 0;
+    background-color: var(--black);
+    padding: 50px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.body__main__searchClient__form__clientName {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.body__main__searchClient__form__submit {
+    padding: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--black);
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all .1s linear;
+}
+
+.body__main__searchClient__form__submit:hover {
+    transform: translateY(-5px);
+}
