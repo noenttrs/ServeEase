@@ -10,12 +10,33 @@
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     background-color: transparent;
     margin: 25px 100px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 a {
     text-decoration: none;
+}
+
+.menuToggle {
+    display: none;
+}
+
+menu {
+    display: none;
 }
 
 .body__header__nav {
@@ -147,4 +168,170 @@ a {
 
 .body__header__connexion__myAccount__content__logout {
     color: red;
+}
+
+@media screen and (max-width: 800px) {
+    .body__header__connexion {
+        display: none;
+    }
+
+    .body__header__nav__menuToggle {
+        display: block;
+        width: 30px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        z-index: 99;
+    }
+
+    .body__header__nav__menuToggle .line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--black);
+        border-radius: 50px;
+        transition: all .2s linear;
+    }
+
+    menu {
+        transform: translateX(1000px);
+        display: block;
+        position: fixed;
+        width: 70%;
+        background-color: white;
+        height: 100%;
+        z-index: 999;
+        right: 0;
+        top: 0;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        padding: 50px 30px;
+        box-sizing: border-box;
+        transition: all .2s linear;
+    }
+
+    menu.active {
+        transform: translateX(0);
+    }
+
+    .body__header__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .body__header__menu__signin {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        gap: 10px;
+        color: var(--black);
+        padding: 15px;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .body__header__menu__signin a {
+        color: var(--black);
+    }
+
+
+    .body__header__menu__signup {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        gap: 10px;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--black);
+    }
+
+    .body__header__menu__signup a {
+        color: #fff
+    }
+
+    .body__header__menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .body__header__menu__up {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .body__header__menu__up__myAccount {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body__header__menu__up__myAccount__placeholder {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        color: var(--black);
+    }
+
+    .body__header__menu__up__myAccount__placeholder__left {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .body__header__menu__up__myAccount__placeholder__rigth i.active {
+        transform: rotate(180deg);
+    }
+
+    .body__header__menu__up__myAccount__content {
+        display: none;
+    }
+
+    .body__header__menu__up__myAccount__content.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body__header__menu__up__myAccount__content a {
+        color: var(--black);
+        padding: 12px 0;
+    }
+
+    .body__header__menu__up__basket {
+        text-align: center;
+        background-color: var(--black);
+        padding: 15px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .body__header__menu__logout {
+        text-align: center;
+        background-color: red;
+        border-radius: 5px;
+        padding: 15px 0;
+        color: #fff;
+    }
 }

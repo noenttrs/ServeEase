@@ -16,7 +16,7 @@ class AdminController
 
     function showAdmin()
     {
-        require VIEWS . "gateway/adminpage.php";
+        require VIEWS . "admin/home.php";
     }
 
     public function index()
