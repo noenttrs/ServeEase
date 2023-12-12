@@ -9,7 +9,7 @@ include_once VIEWS . "base/Header.php"
         <section class="body__main__presentation__content">
             <h1 class="body__main__presentation__h1">Bienvenue chez <span>ServeEase</span></h1>
             <p class="body__main__presentation__p">Découvrez notre système sophistiqué en scannant le code QR sur votre table pour choisir votre plat avec précision via une interface moderne et intuitive.</p>
-            <a href="" class="body__main__presentation__a">En savoir plus</a>
+            <a href="#history" class="body__main__presentation__a">En savoir plus</a>
         </section>
         <img class="body__main__presentation__image" src="img/burger.png" alt="burger.png">
     </section>
@@ -155,7 +155,7 @@ include_once VIEWS . "base/Header.php"
         </section>
     </section>
 
-    <section class="body__main__descriptionOfProduct">
+    <section class="body__main__descriptionOfProduct" id="history">
         <section class="body__main__descriptionOfProduct__content">
             <h2 class="body__main__descriptionOfProduct__h2">Notre histoire</h2>
             <p class="body__main__descriptionOfProduct__p">

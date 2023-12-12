@@ -40,6 +40,13 @@ class ProductController {
         }
         }
         
+        // foreach($_SESSION["basket"]["productItem"] as $productItem) {
+        //     $product = new Product();
+        //     $product = $this->productManager->getProductById($productItem[0]);
+        //     var_dump($product); exit();
+        //     $product->set
+        //     $basket[] = $product;
+        // }
         require VIEWS . "account/basket.php";
     }
 

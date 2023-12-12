@@ -1,0 +1,118 @@
+main {
+    margin: 50px 100px;
+}
+
+.body__main__h1 {
+    color: var(--black);
+    font-size: 80px;
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+
+.body__main__p {
+    display: flex;
+    margin: auto;
+    color: var(--black);
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 70%;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 100px;
+}
+
+.body__main__basket::-webkit-scrollbar {
+    height: 5px;
+}
+
+.body__main__basket::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.body__main__basket::-webkit-scrollbar-thumb {
+    background-color: #544f4f;
+    border-radius: 10px;
+}
+
+.body__main__table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #544f4f #ffffff;
+}
+
+.body__main__table__titleOfProduct td {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.body__main__product__table__descriptionOfProduct td {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 10px 50px;
+}
+
+.body__main__product__table__addItem {
+    background-color: green;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: var(--font);
+    padding: 10px;
+}
+
+.body__main__product__table__titleOfProduct__imageOfProductTitle,
+.body__main__product__table__titleOfProduct__nameOfProductTitle,
+.body__main__product__table__titleOfProduct__quantityOfProductTitle,
+.body__main__product__table__titleOfProduct__priceOfProductTitle {
+    font-family: var(--font);
+    font-size: 18px;
+    text-align: center;
+}
+
+.body__main__product__table__descriptionOfProduct__imageOfProduct img {
+    height: auto;
+    width: 100px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.body__main__product__table__descriptionOfProduct__imageOfProduct__container {
+    display: flex;
+}
+
+.body__main__product__table__descriptionOfProduct__nameOfProduct,
+.body__main__product__table__descriptionOfProduct__quantityOfProduct,
+.body__main__product__table__descriptionOfProduct__priceOfProduct {
+    font-family: var(--font);
+    font-size: 18px;
+    text-align: center;
+}
+
+.body__main__product__table__descriptionOfProduct__quantityOfProduct__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body__main__product__table__descriptionOfProduct__quantityOfProduct__container__input {
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 50px;
+    background-color: transparent;
+    font-family: var(--font);
+    font-size: 18px;
+}
+
+.body__main__product__table__descriptionOfProduct__quantityOfProduct__container i,
+.body__main__product__table__descriptionOfProduct__deleteProduct i {
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--black);
+}

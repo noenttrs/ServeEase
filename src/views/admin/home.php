@@ -64,11 +64,11 @@ require VIEWS . "base/header.php";
         <script>
             FilePond.create(
                 document.querySelector('.filepond'), {
-                    acceptedFileTypes: ['image/jpeg', 'image/png', 'image/jpg']
+                    acceptedFileTypes: ['image/*']
                 })
             FilePond.create(
                 document.querySelector('.filepond1'), {
-                    acceptedFileTypes: ['image/jpeg', 'image/png', 'image/jpg']
+                    acceptedFileTypes: ['image/*']
                 })
         </script>
     </section>
