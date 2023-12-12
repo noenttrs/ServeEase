@@ -22,10 +22,9 @@ class ProductManager
 
     public function getProductById($id)
     {
-        echo $id;
         $query = $this->db->prepare("SELECT * FROM product WHERE PRODUCT_ID = ?");  
         $query->execute(
-          [$id] 
+            [$id] 
         );
         return $query->fetchObject(Product::class);
     }
