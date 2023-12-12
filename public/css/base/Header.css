@@ -27,6 +27,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+small {
+    color: red;
+}
+
 a {
     text-decoration: none;
 }
