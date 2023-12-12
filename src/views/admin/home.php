@@ -35,7 +35,7 @@ require VIEWS . "base/header.php";
 
         <section class="body__main__createProductAndMenu__createMenu">
             <h2 class="body__main__createProductAndMenu__createMenu__h2">Créer un menu</h2>
-            <form action="/createProduct" class="body__main__createProductAndMenu__createMenu__form">
+            <form action="/createMenu" class="body__main__createProductAndMenu__createMenu__form">
                 <div class="body__main__createProductAndMenu__createMenu__form__menuName autoInputText">
                     <input type="text" name="menuName" id="menuNameId" placeholder=" " required>
                     <label for="menuNameId">Nom du menu</label>
@@ -74,26 +74,26 @@ require VIEWS . "base/header.php";
     </section>
     <section class="body__main__findOrderAndClient">
         <section class="body__main__findOrderAndClient__order">
-            <h2 class="body__main__findOrderAndClient__order__h2">Recherche d'un produit</h2>
+            <h2 class="body__main__findOrderAndClient__order__h2">Recherche d'une commande</h2>
             <form action="/searchCommand" method="post" class="body__main__findOrderAndClient__order__form">
                 <div class="body__main__findOrderAndClient__order__form__orderSearch autoInputText">
                     <input type="text" name="orderSearch" id="orderSearchId" placeholder=" ">
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <label for="orderSearchId">Recherche d'un produit</label>
+                    <label for="orderSearchId">Rechercher une commande</label>
                 </div>
             </form>
         </section>
         <section class="body__main__findOrderAndClient__client">
             <h2 class="body__main__findOrderAndClient__client__h2">Recherche d'un client</h2>
-            <form action="/searchCommand" method="post" class="body__main__findOrderAndClient__client__form">
+            <form action="/searchClient" method="post" class="body__main__findOrderAndClient__client__form">
                 <div class="body__main__findOrderAndClient__client__form__orderSearch autoInputText">
                     <input type="text" name="orderSearch" id="orderSearchId" placeholder=" " required>
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <label for="orderSearchId">Recherche d'un produit</label>
+                    <label for="orderSearchId">Rechercher un client</label>
                 </div>
             </form>
         </section>
