@@ -95,6 +95,7 @@ require VIEWS . "base/header.php";
                     </button>
                     <label for="orderSearchId">Rechercher un client par email</label>
                 </div>
+                <small class="error"><?php if(isset($error)) echo $error ?></small>
             </form>
         </section>
     </section>

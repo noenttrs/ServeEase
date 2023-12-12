@@ -18,6 +18,7 @@ class AdminManager {
         $query->execute([
             "clientMail" => $clientMail
         ]);
+        
         return $query->fetchObject(Client::class);
     }
 

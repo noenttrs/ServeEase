@@ -23,9 +23,18 @@ class AdminController
     {
         if($_SESSION['client']['CLIENT_ROLE'] !== 1){
             header("Location: /");
-            exit();
+            return;
         }
+
+
         $client = $this->adminManager->searchClient($_POST["clientSearch"]);
+
+        if(!$client){
+            $error = "Aucun client trouvé";
+            require VIEWS . "admin/home.php";
+            return;
+        }
+
         require VIEWS . "admin/searchClient.php";
     }
 
