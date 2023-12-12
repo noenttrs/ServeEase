@@ -33,5 +33,6 @@ $router->get('/basket', "ProductController@showBasket");
 // Admin
 $router->get('/admin', "AdminController@showAdmin");
 $router->post('/searchClient', "AdminController@searchClient");
+$router->post('/updateClient', "AdminController@modifyClient");
 
 $router->run();
