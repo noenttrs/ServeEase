@@ -85,8 +85,8 @@ html {
 }
 
 .body__main__container {
-    width: 350px !important;
-    height: 440px !important;
+    width: 350px;
+    height: 440px;
     cursor: pointer;
     padding: 10px;
     transition: all .1s linear;
@@ -216,13 +216,13 @@ html {
     }
 
     .body__main__presentation {
-        margin: 50px 50px;
+        margin: 50px 25px 25px 25px;
     }
 
     .body__main__trend,
     .body__main__menu,
     .body__main__burger {
-        margin: 150px 50px 100px 50px;
+        margin: 100px 50px;
     }
 }
 
@@ -252,6 +252,12 @@ html {
     .body__main__descriptionOfProduct__p {
         text-align: center;
     }
+
+    .body__main__trend,
+    .body__main__menu,
+    .body__main__burger {
+        margin: 50px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -267,15 +273,25 @@ html {
         margin: 50px 25px;
     }
 
-    .body__main__trend,
-    .body__main__menu,
-    .body__main__burger {
-        margin: 150px 25px 100px 25px;
+    .body__main__container {
+        width: 280px;
+    }
+
+    .body__main__container__image img {
+        width: 280px;
     }
 }
 
 @media screen and (max-width: 400px) {
     .body__main__managerWithGrid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .body__main__container {
+        width: 250px;
+    }
+
+    .body__main__container__image img {
+        width: 250px;
     }
 }
