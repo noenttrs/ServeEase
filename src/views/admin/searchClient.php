@@ -17,7 +17,7 @@ require VIEWS . "base/header.php";
 <main>
     <section class="body__main__searchClient">
         <h1 class="body__main__searchClient__h1">Client trouvé !</h1>
-        <p class="body__main__searchClient__p">Voici le résultat pour votre recherche matissegom@gmail.com</p>
+        <p class="body__main__searchClient__p">Voici le résultat pour votre recherche <?php echo $client->getClientMail(); ?></p>
         <form action="/updateClient" class="body__main__searchClient__form" method="post">
             <div class="body__main__searchClient__form__clientName autoInputText">
                 <input type="text" name="clientName" id="clientNameId" value="<?php echo $client->getClientSurname(); ?>" placeholder=" ">
