@@ -1,9 +1,10 @@
 <?php
-$pathCss = "css/account/basket.css";
+$pathCss = "/css/account/basket.css";
 require_once VIEWS . "base/Header.php"; ?>
 <?php if (!isset($_SESSION["client"])) {
     header("Location: /");
 }
+
 ?>
 
 <main>
@@ -13,41 +14,46 @@ require_once VIEWS . "base/Header.php"; ?>
         Une fois ces modifications effectuées, il vous suffit de cliquer sur "Procéder au paiement" pour procéder au règlement.
     </p>
     <section class="body__main__basket">
+
+    <?php 
+    foreach($basket as $product) { 
+ 
+         ?>
         <table class="body__main__table">
             <tr class="body__main__table__titleOfProduct">
                 <td class="body__main__table__titleOfProduct__imageOfProductTitle">
-                    Image du produit
+                    <?php echo $product->getProductImage()?>
                 </td>
                 <td class="body__main__table__titleOfProduct__nameOfProductTitle">
-                    Nom du produit
+                    <?php echo $product->getProductName()?>
                 </td>
                 <td class="body__main__table__titleOfProduct__quantityOfProductTitle">
                     <p>Quantité</p>
                 </td>
                 <td class="body__main__table__titleOfProduct__priceOfProductTitle">
-                    Prix
+                    €<?php echo $product->getProductPrice()?> EUR
                 </td>
                 <td></td>
             </tr>
             <tr class="body__main__product__table__descriptionOfProduct">
                 <td class="body__main__product__table__descriptionOfProduct__imageOfProduct">
                     <div class="body__main__product__table__descriptionOfProduct__imageOfProduct__container">
-                        <img src="img/BO_MCFIRST.webp" alt="">
+                        <img src="/img/BO_MCFIRST.webp" alt="">
                     </div>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__nameOfProduct">
-                    test
+                    <?php echo $product->getProductDescription()?>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__quantityOfProduct">
                     <div class="body__main__product__table__descriptionOfProduct__quantityOfProduct__container">
                         <i class="fa-solid fa-minus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__minus"></i>
-                        <span>1</span>
+                        <span><?php echo $product->getProductQuantity()?></span>
                         <input type="hidden" value="">
-                        <i class="fa-solid fa-plus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__plus"></i>
+                        <a href="/basket/<?php echo $product->getProductId()?>/addOne"><i class="fa-solid fa-plus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__plus"></i></a>
                     </div>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__priceOfProduct">
-                    €120 EUR
+                    €<?php echo $product->getProductPrice()?> EUR
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__deleteProduct">
                     <a href="/basket?delete=" class="">
@@ -56,6 +62,7 @@ require_once VIEWS . "base/Header.php"; ?>
                 </td>
             </tr>
         </table>
+    <?php } ?>
     </section>
     <section class="body__main__checkout">
         

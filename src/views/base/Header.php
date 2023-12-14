@@ -16,9 +16,9 @@ if (session_status() == 1) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/38e38eb36a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/more.css">
-    <link rel="stylesheet" href="css/base/Header.css">
-    <link rel="stylesheet" href="css/base/Footer.css">
+    <link rel="stylesheet" href="/css/more.css">
+    <link rel="stylesheet" href="/css/base/Header.css">
+    <link rel="stylesheet" href="/css/base/Footer.css">
     <link rel="stylesheet" href=<?php echo "$pathCss" ?>>
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
