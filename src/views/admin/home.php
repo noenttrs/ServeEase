@@ -89,12 +89,13 @@ require VIEWS . "base/header.php";
             <h2 class="body__main__findOrderAndClient__client__h2">Recherche d'un client</h2>
             <form action="/searchClient" method="post" class="body__main__findOrderAndClient__client__form">
                 <div class="body__main__findOrderAndClient__client__form__orderSearch autoInputText">
-                    <input type="text" name="orderSearch" id="orderSearchId" placeholder=" " required>
+                    <input type="text" name="clientSearch" id="orderSearchId" placeholder=" " required>
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <label for="orderSearchId">Rechercher un client</label>
+                    <label for="orderSearchId">Rechercher un client par email</label>
                 </div>
+                <small class="error"><?php if(isset($error)) echo $error ?></small>
             </form>
         </section>
     </section>

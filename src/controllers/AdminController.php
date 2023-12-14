@@ -3,6 +3,7 @@
 namespace ServeEase\controllers;
 
 use ServeEase\models\AdminManager;
+use ServeEase\models\Client;
 
 class AdminController
 {
@@ -16,6 +17,90 @@ class AdminController
 
     function showAdmin()
     {
+        require VIEWS . "admin/home.php";
+    }
+
+    function searchClient()
+    {
+        if($_SESSION['client']['CLIENT_ROLE'] !== 1){
+            header("Location: /");
+            return;
+        }
+
+
+        $client = $this->adminManager->searchClient($_POST["clientSearch"]);
+
+        if(!$client){
+            $error = "Aucun client trouvé";
+            require VIEWS . "admin/home.php";
+            return;
+        }
+
+        require VIEWS . "admin/searchClient.php";
+    }
+
+    function modifyClient()
+    {
+        if($_SESSION['client']['CLIENT_ROLE'] !== 1){
+            header("Location: /");
+            return;
+        }
+
+        $clientNameValue = $_POST["clientName"];
+        $clientSurnameValue = $_POST["clientSurname"];
+        $clientMailValue = $_POST["clientMail"];
+        $clientPasswordValue = $_POST["clientPassword"];
+        $clientFidelityValue = $_POST["clientFidelity"];
+        $clientRoleValue = $_POST["clientRole"];
+        $clientId = $_POST["clientId"];
+        $error = false;
+
+        if(strlen($clientNameValue) > 50) {
+            $clientName = "Le prénom ne doit pas dépasser 50 caractères";
+            $error = true;
+        }
+
+        if(strlen($clientSurnameValue) > 50) {
+            $clientSurname = "Le nom de famille ne doit pas dépasser 50 caractères";
+            $error = true;
+        }
+
+        if(!filter_var($clientMailValue, FILTER_VALIDATE_EMAIL)){
+            $clientMail = "L'adresse mail n'est pas valide";
+            $error = true;
+        }
+
+        if(strlen($clientPasswordValue) < 8) {
+            $clientPassword = "Le mot de passe doit contenir au moins 8 caractères";
+            $error = true;
+        }
+
+        if(!preg_match("#[0-9]+#", $clientPasswordValue)) {
+            $clientPassword = "Le mot de passe doit contenir au moins un chiffre";
+            $error = true;
+        }
+
+        if($error) {
+            require VIEWS . "admin/searchClient.php";
+            return;
+        }
+
+
+        $client = new Client();
+        $client->setClientName($_POST["clientName"]);
+        $client->setClientSurname($_POST["clientSurname"]);
+        $client->setClientMail($_POST["clientMail"]);
+
+        $client->setClientPassword(password_hash($_POST["clientPassword"], PASSWORD_DEFAULT));
+        $client->setClientFidelity($_POST["clientFidelity"]);
+        $client->setClientRole($_POST["clientRole"]);
+        $client->setClientId($clientId);
+
+        $adminManager = new AdminManager();
+        
+        $this->adminManager->modifyClient($client);
+
+        $success = "Le client a bien été modifié";
         require VIEWS . "admin/home.php";
     }
 

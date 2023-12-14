@@ -96,7 +96,7 @@ main {
 
 .body__main__product__table__descriptionOfProduct__quantityOfProduct__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -115,4 +115,67 @@ main {
     cursor: pointer;
     font-size: 18px;
     color: var(--black);
+}
+
+.body__main__checkout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.body__main__checkout__backToShop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    color: var(--black);
+    transition: all .1s linear;
+}
+
+.body__main__checkout__backToShop a {
+    border-bottom: solid transparent 1px;
+    transition: border-bottom .3s ease-in-out;
+    padding-bottom: 3px;
+}
+
+.body__main__checkout__backToShop:hover a {
+    border-bottom: solid black 1px;
+}
+
+.body__main__checkout__backToShop i {
+    transition: transform .3s ease-in-out;
+}
+
+.body__main__checkout__backToShop:hover i {
+    transform: translateX(-5px);
+}
+
+.body__main__checkout__backToShop a {
+    color: var(--black);
+}
+
+.body__main__checkout__stripe p {
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-align: end;
+}
+
+.body__main__checkout__stripe__form input {
+    border: none;
+    background-color: var(--black);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+.body__main__checkout__stripe__form input:hover {
+    transform: translateX(5px);
 }

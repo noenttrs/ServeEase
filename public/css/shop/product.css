@@ -114,3 +114,71 @@
     border: none;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 1400px) {
+    .body__main__presentation {
+        flex-direction: column;
+    }
+
+    .body__main__presentation__image {
+        width: 100%;
+    }
+
+    .body__main__presentation__content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        margin: 25px 50px;
+    }
+
+    .body__main__presentation {
+        margin: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .body__main__presentation__content__name {
+        font-size: 60px;
+    }
+
+    .body__main__presentation__content__price,
+    .body__main__presentation__content__description {
+        font-size: 18px;
+    }
+
+    .body__main__presentation__content__select__description__placeholder {
+        font-size: 18px;
+    }
+
+    .body__main__presentation__content__select__description__content {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        margin: 25px;
+    }
+
+    .body__main__presentation {
+        margin: 50px 25px;
+    }
+
+    .body__main__presentation__content__name {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .body__main__presentation__content__addPanerForm {
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .body__main__presentation__content__addPanerForm__inputQuantity {
+        width: 100%;
+    }
+}

@@ -33,6 +33,7 @@ $router->get('/basket/:productId/addOne', "ProductController@addBasket");
 
 // Admin
 $router->get('/admin', "AdminController@showAdmin");
-$router->get('/searchClient', "AdminController@searchClient");
+$router->post('/searchClient', "AdminController@searchClient");
+$router->post('/updateClient', "AdminController@modifyClient");
 
 $router->run();
