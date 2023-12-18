@@ -46,7 +46,7 @@ require_once VIEWS . "base/Header.php"; ?>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__quantityOfProduct">
                     <div class="body__main__product__table__descriptionOfProduct__quantityOfProduct__container">
-                        <i class="fa-solid fa-minus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__minus"></i>
+                        <a href="/basket/<?php echo $product->getProductId()?>/minusOne"><i class="fa-solid fa-minus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__minus"></i></a>
                         <span><?php echo $product->getProductQuantity()?></span>
                         <input type="hidden" value="">
                         <a href="/basket/<?php echo $product->getProductId()?>/addOne"><i class="fa-solid fa-plus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__plus"></i></a>
@@ -67,7 +67,7 @@ require_once VIEWS . "base/Header.php"; ?>
     <section class="body__main__checkout">
         <div class="body__main__checkout__backToShop">
             <i class="fa-solid fa-arrow-left"></i>
-            <a href="">Poursuivre mes achats</a>
+            <a href="/shop">Poursuivre mes achats</a>
         </div>
         <div class="body__main__checkout__stripe">
             <p>Total:<br>€120 EUR</p>
