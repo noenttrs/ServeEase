@@ -12,7 +12,7 @@ require VIEWS . "base/header.php";
     <section class="body__main__createProductAndMenu">
         <section class="body__main__createProductAndMenu__createProduct">
             <h2 class="body__main__createProductAndMenu__createProduct__h2">Créer un produit</h2>
-            <form action="/createProduct" class="body__main__createProductAndMenu__createProduct__form">
+            <form action="/createProduct" class="body__main__createProductAndMenu__createProduct__form" enctype="multipart/form-data" method="post">
                 <div class="body__main__createProductAndMenu__createProduct__form__productName autoInputText">
                     <input type="text" name="productName" id="productNameId" placeholder=" " required>
                     <label for="productNameId">Nom du produit</label>
@@ -35,7 +35,7 @@ require VIEWS . "base/header.php";
 
         <section class="body__main__createProductAndMenu__createMenu">
             <h2 class="body__main__createProductAndMenu__createMenu__h2">Créer un menu</h2>
-            <form action="/createMenu" class="body__main__createProductAndMenu__createMenu__form">
+            <form action="/createMenu" class="body__main__createProductAndMenu__createMenu__form" enctype="multipart/form-data" method="post">
                 <div class="body__main__createProductAndMenu__createMenu__form__menuName autoInputText">
                     <input type="text" name="menuName" id="menuNameId" placeholder=" " required>
                     <label for="menuNameId">Nom du menu</label>

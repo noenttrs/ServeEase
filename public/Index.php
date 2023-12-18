@@ -35,5 +35,6 @@ $router->get('/basket/:productId/addOne', "ProductController@addBasket");
 $router->get('/admin', "AdminController@showAdmin");
 $router->post('/searchClient', "AdminController@searchClient");
 $router->post('/updateClient', "AdminController@modifyClient");
+$router->post('/createProduct', "AdminController@createProduct");
 
 $router->run();

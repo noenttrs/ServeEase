@@ -4,6 +4,7 @@ namespace ServeEase\controllers;
 
 use ServeEase\models\AdminManager;
 use ServeEase\models\Client;
+use ServeEase\models\Product;
 
 class AdminController
 {
@@ -101,6 +102,54 @@ class AdminController
         $this->adminManager->modifyClient($client);
 
         $success = "Le client a bien été modifié";
+        require VIEWS . "admin/home.php";
+    }
+
+    function createProduct(){
+        if($_SESSION['client']['CLIENT_ROLE'] !== 1){
+            header("Location: /");
+            return;
+        }
+
+        $productName = $_POST["productName"];
+        $productDescription = $_POST["productDescription"];
+        $productPrice = $_POST["productPrice"];
+        $productImageName = $_FILES["productImage"]["name"];
+        $productType = $_POST["productType"];
+        $error = false;
+
+        if(strlen($productName) > 50) {
+            $productName = "Le nom du produit ne doit pas dépasser 50 caractères";
+            $error = true;
+        }
+
+        if(strlen($productDescription) > 255) {
+            $productDescription = "La description du produit ne doit pas dépasser 255 caractères";
+            $error = true;
+        }
+
+        if($error) {
+            require VIEWS . "admin/home.php";
+            return;
+        }
+
+        //stocker l'image dans le dossier public/images et récupérer le nom de l'image pour le stocker dans la bdd avec le $_FILES
+
+        if ($_FILES['productImage']["error"] !== UPLOAD_ERR_NO_FILE) {
+            $uploaddir = './img/';
+            $uploadfile = $uploaddir . basename($_FILES['employeePicture']['name']);
+            move_uploaded_file($_FILES['employeePicture']['tmp_name'], $uploadfile);
+        }
+
+        $product = new Product();
+        $product->
+
+
+
+        $adminManager = new AdminManager();
+        $adminManager->createProduct();
+
+        $success = "Le produit a bien été créé";
         require VIEWS . "admin/home.php";
     }
 
