@@ -23,16 +23,16 @@ require_once VIEWS . "base/Header.php"; ?>
         <table class="body__main__table">
             <tr class="body__main__table__titleOfProduct">
                 <td class="body__main__table__titleOfProduct__imageOfProductTitle">
-                    <?php echo $product->getProductImage()?>
+                    Image du produit
                 </td>
                 <td class="body__main__table__titleOfProduct__nameOfProductTitle">
-                    <?php echo $product->getProductName()?>
+                    Nom du produit
                 </td>
                 <td class="body__main__table__titleOfProduct__quantityOfProductTitle">
                     <p>Quantité</p>
                 </td>
                 <td class="body__main__table__titleOfProduct__priceOfProductTitle">
-                    €<?php echo $product->getProductPrice()?> EUR
+                    Prix du produit
                 </td>
                 <td></td>
             </tr>
@@ -43,7 +43,7 @@ require_once VIEWS . "base/Header.php"; ?>
                     </div>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__nameOfProduct">
-                    <?php echo $product->getProductDescription()?>
+                    <?php echo $product->getProductName()?>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__quantityOfProduct">
                     <div class="body__main__product__table__descriptionOfProduct__quantityOfProduct__container">
