@@ -23,6 +23,13 @@ class ProductController
         require VIEWS . "shop/product.php";
     }
 
+    // Pour afficher la page produit
+    public function showAllProduct()
+    {
+        $ProductManager = new ProductManager();
+        $product = $this->productManager->getAll();
+        require VIEWS . "shop/allProduct.php";
+    }
     // Pour ajouter un produit au panier
     public function addBasket($id = null)
     {

@@ -53,7 +53,7 @@ require_once VIEWS . "base/Header.php"; ?>
                     </div>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__priceOfProduct">
-                    €<?php echo $product->getProductPrice()?> EUR
+                    €<?php echo $product->getProductPrice() * $product->getProductQuantity()?> EUR
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__deleteProduct">
                     <a href="/basket?delete=" class="">
