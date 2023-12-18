@@ -11,6 +11,7 @@ class Product
     private $PRODUCT_DESCRIPTION;
     private $PRODUCT_ALLERGEN;
     private $PRODUCT_PRICE;
+    private $PRODUCT_TYPE;
 
 
     private $productQuantity;
@@ -109,5 +110,15 @@ class Product
     public function getProductQuantity()
     {
         return $this->productQuantity;
+    }
+
+    public function setProductType($productType)
+    {
+        $this->PRODUCT_TYPE = $productType;
+    }
+
+    public function getProductType()
+    {
+        return $this->PRODUCT_TYPE;
     }
 }
