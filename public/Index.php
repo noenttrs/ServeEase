@@ -23,12 +23,11 @@ $router->post('/signin', "ClientController@signin");
 $router->get('/logout', "ClientController@logout");
 
 // Shop
-$router->get('/product', "ProductController@showProduct");
+$router->get('/product/:productId', "ProductController@showProduct");
 $router->get('/shop', "ProductController@showAllProduct");
 $router->post('/product', "ProductController@addBasket");
 
 // Basket
-$router->get('/product', "ProductController@addBakset");
 $router->get('/basket', "ProductController@showBasket");
 $router->get('/basket/:productId/addOne', "ProductController@addBasket");
 $router->get('/basket/:productId/minusOne', "ProductController@minusBasket");
