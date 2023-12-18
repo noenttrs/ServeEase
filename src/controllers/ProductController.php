@@ -99,13 +99,11 @@ class ProductController
                 // Si l'id du produit est trouvé
                 if ($productItem[0] == $id) {
                     // On enleve le produit du panier
-                    unset ($_SESSION['basket']["productItem"][$compteur]); 
-                        
+                    unset ($_SESSION['basket']["productItem"][$compteur]);
                     $compteur += 1;
                 }
             }
         }
-
         $this->showBasket();
     }
 
