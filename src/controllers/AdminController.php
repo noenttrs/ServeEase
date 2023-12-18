@@ -137,8 +137,8 @@ class AdminController
 
         if ($_FILES['productImage']["error"] !== UPLOAD_ERR_NO_FILE) {
             $uploaddir = './img/';
-            $uploadfile = $uploaddir . basename($_FILES['employeePicture']['name']);
-            move_uploaded_file($_FILES['employeePicture']['tmp_name'], $uploadfile);
+            $uploadfile = $uploaddir . basename($_FILES['productImage']['name']);
+            move_uploaded_file($_FILES['productImage']['tmp_name'], $uploadfile);
         }
 
         $product = new Product();

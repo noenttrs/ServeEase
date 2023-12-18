@@ -26,7 +26,7 @@ require VIEWS . "base/header.php";
                     <i class="fa-solid fa-euro-sign"></i>
                     <label for="productPriceId">Prix du produit</label>
                 </div>
-                <select name="producttype" id="">
+                <select name="productType" id="selectProductTypeID">
                     <option value="" hidden selected disabled>Catégorie du produit</option>
                     <option value="1">Burger</option>
                     <option value="2">Accompagnement</option>
