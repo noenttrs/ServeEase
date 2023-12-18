@@ -65,7 +65,7 @@ html {
     display: flex;
     flex-direction: row;
     padding: 20px 8px;
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: 10px;
 }
 
@@ -95,6 +95,10 @@ html {
     justify-content: space-between;
 }
 
+.body__main__managerWithSwipper a {
+    color: var(--black);
+}
+
 .body__main__container:hover,
 .body__main__containerGrid:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -102,6 +106,7 @@ html {
 
 .body__main__container__image img {
     width: 350px;
+    max-height: 350px;
     height: auto;
     object-fit: cover;
 }
