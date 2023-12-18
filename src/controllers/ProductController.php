@@ -78,37 +78,14 @@ class ProductController
     {
         // unset ($_SESSION['basket'] );
 
-        if ($id == null) {
-            // Si il n'y a pas de panier en session 
-            if (!isset($_SESSION["basket"])) {
-                $_SESSION['basket'] = [];
-                $_SESSION['basket']['productItem'] = [];
-                array_push($_SESSION['basket']['productItem'], [$_POST['productId'], 1]);
-            }
-            // Si il y a deja un panier, on mets le produit dedans
-            else {
-                $compteur = 0;
-                $trouve = false;
-                //si le produit est déjà dedans on incrémente la quantité
-                foreach ($_SESSION["basket"]["productItem"] as $productItem) {
-                    if ($productItem[0] == $_POST['productId']) {
-                        $_SESSION["basket"]["productItem"][$compteur][1] -= 1;
-                        $trouve = true;
-                        $compteur -= 1;
-                    }
-                }
-                //sinon on met le produit dans le panier avec qte 1
-                if ($trouve==false) {
-                    array_push($_SESSION['basket']['productItem'], [$_POST['productId'], 1]);
-                }
-            }
-        }
         if ($id != null) {
             $compteur = 0;
             foreach ($_SESSION["basket"]["productItem"] as $productItem) {
                 if ($productItem[0] == $id) {
-                    $_SESSION["basket"]["productItem"][$compteur][1] -= 1;
-                    $compteur -= 1;
+                    if( $_SESSION["basket"]["productItem"][$compteur][1] > 1){
+                        $_SESSION["basket"]["productItem"][$compteur][1] -= 1;
+                        }
+                    $compteur += 1;
                 }
             }
         }
