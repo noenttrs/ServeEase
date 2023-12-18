@@ -1,7 +1,7 @@
 <?php
 $pathCss = "css/shop/product.css";
 require_once VIEWS . "base/Header.php";
-if(!isset($productId)){
+if(!isset($product)){
     header("Location: /404");
     return;
 }
@@ -12,16 +12,14 @@ if(!isset($productId)){
         <section class="body__main__presentation__image">
             <div class="swiper ImageSwipper">
                 <div class="swiper-wrapper">
-                    <img class="swiper-slide" src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="">
-                    <img class="swiper-slide" src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="">
-                    <img class="swiper-slide" src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="">
+                    <img class="swiper-slide" src="/img/<?php echo $product->getProductImage() ?>" alt="">
                 </div>
             </div>
         </section>
         <section class="body__main__presentation__content">
-            <h1 class="body__main__presentation__content__name">Menu Best Of™</h1>
-            <p class="body__main__presentation__content__price">€17 EUR</p>
-            <p class="body__main__presentation__content__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati adipisci neque veritatis similique aliquam nisi delectus minus, laborum veniam magni voluptate doloribus exercitationem eos, dignissimos nemo odio pariatur placeat voluptas!</p>
+            <h1 class="body__main__presentation__content__name"><?php echo $product->getProductName()?></h1>
+            <p class="body__main__presentation__content__price"><?php echo $product->getProductPrice()?></p>
+            <p class="body__main__presentation__content__description"><?php echo $product->getProductDescription()?></p>
             <section class="body__main__presentation__content__select">
                 <section class="body__main__presentation__content__select__description">
                     <section class="body__main__presentation__content__select__description__placeholder">
