@@ -92,8 +92,19 @@ class ProductController
     }
 
     // Pour suprimer un produit au panier
-    public function delete(){
-        unset ($_SESSION['basket']);
+    public function delete($id = null){
+        if ($id != null) {
+            $compteur = 0;
+            foreach ($_SESSION["basket"]["productItem"] as $productItem) {
+                // Si l'id du produit est trouvé
+                if ($productItem[0] == $id) {
+                    // On enleve le produit du panier
+                    unset ($_SESSION['basket']["productItem"][$compteur]); 
+                        
+                    $compteur += 1;
+                }
+            }
+        }
 
         $this->showBasket();
     }
