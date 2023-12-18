@@ -26,6 +26,13 @@ require VIEWS . "base/header.php";
                     <i class="fa-solid fa-euro-sign"></i>
                     <label for="productPriceId">Prix du produit</label>
                 </div>
+                <select name="producttype" id="">
+                    <option value="" hidden selected disabled>Catégorie du produit</option>
+                    <option value="1">Burger</option>
+                    <option value="2">Accompagnement</option>
+                    <option value="3">Boisson</option>
+                    <option value="4">Dessert</option>
+                </select>
                 <div class="body__main__createProductAndMenu__createProduct__form__productImage">
                     <input type="file" class="filepond" name="productImage" multiple data-allow-reorder="true" data-max-file-size="3MB" data-max-files="5">
                 </div>
