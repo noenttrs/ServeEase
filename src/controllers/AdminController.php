@@ -142,12 +142,20 @@ class AdminController
         }
 
         $product = new Product();
-        $product->
+        $product->setProductDescription($productDescription);
+        $product->setProductName($productName);
+        $product->setProductPrice($productPrice);
+        $product->setProductImage($productImageName);
+        $product->setProductAllergens(null);
+        $product->setProductType($productType);
+        $product->setProductTypeMenu(null);
+
+
 
 
 
         $adminManager = new AdminManager();
-        $adminManager->createProduct();
+        $adminManager->createProduct($product);
 
         $success = "Le produit a bien été créé";
         require VIEWS . "admin/home.php";

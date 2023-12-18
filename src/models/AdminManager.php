@@ -45,8 +45,29 @@ class AdminManager {
         return $query->fetchObject(Client::class);
     }
 
-    function createProduct(){
-        
+    function createProduct($product){
+
+        $productTypeMenu = $product->getProductTypeMenu();
+        $productName = $product->getProductName();
+        $productImage = $product->getProductImage();
+        $productDescription = $product->getProductDescription();
+        $productAllergens = $product->getProductAllergens();
+        $productPrice = $product->getProductPrice();
+        $productType = $product->getProductType();
+
+        $query = $this->db->prepare("INSERT INTO product (PRODUCT_TYPE_MENU, PRODUCT_NAME, PRODUCT_IMAGE, PRODUCT_DESCRIPTION, PRODUCT_ALLERGEN, PRODUCT_PRICE, PRODUCT_TYPE) VALUES (:productTypeMenu, :productName, :productImage, :productDescription, :productAllergens, :productPrice, :productType)");
+        $query->execute([
+            "productTypeMenu" => $productTypeMenu,
+            "productName" => $productName,
+            "productImage" => $productImage,
+            "productDescription" => $productDescription,
+            "productAllergens" => $productAllergens,
+            "productPrice" => $productPrice,
+            "productType" => $productType
+        ]);
+
+        return $query->fetchObject(Product::class);
+
     }
 
 }
