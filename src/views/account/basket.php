@@ -59,7 +59,7 @@ require_once VIEWS . "base/Header.php"; ?>
                     echo $totalLigne ?> EUR
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__deleteProduct">
-                    <a href="/basket?delete=" class="">
+                    <a href="/basket/<?php echo $product->getProductId()?>/delete" class="">
                         <i class="fa-solid fa-xmark"></i>
                     </a>
                 </td>

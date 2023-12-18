@@ -33,7 +33,6 @@ class ProductController
     // Pour ajouter un produit au panier
     public function addBasket($id = null)
     {
-        // unset ($_SESSION['basket'] );
 
         if ($id == null) {
             // Si il n'y a pas de panier en session 
@@ -73,10 +72,9 @@ class ProductController
         $this->showBasket();
     }
 
-    // Pour ajouter un produit au panier
+    // Pour enlever un produit au panier
     public function minusBasket($id = null)
     {
-        // unset ($_SESSION['basket'] );
 
         if ($id != null) {
             $compteur = 0;
@@ -89,6 +87,13 @@ class ProductController
                 }
             }
         }
+
+        $this->showBasket();
+    }
+
+    // Pour suprimer un produit au panier
+    public function delete(){
+        unset ($_SESSION['basket']);
 
         $this->showBasket();
     }
