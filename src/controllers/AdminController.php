@@ -110,11 +110,7 @@ class AdminController
             header("Location: /");
             return;
         }
-
-        var_dump($_POST);
-        var_dump($_FILES);
-        exit;
-
+        
         $productName = $_POST["productName"];
         $productDescription = $_POST["productDescription"];
         $productPrice = $_POST["productPrice"];
