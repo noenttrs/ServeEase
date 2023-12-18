@@ -17,69 +17,22 @@ include_once VIEWS . "base/Header.php"
     <section class="body__main__trend">
         <h2 class="body__main__h2">Nos tendances</h2>
         <section class="body__main__managerWithSwipper">
-            <article class="body__main__container swiper-slide">
-                <div class="body__main__container__image">
-                    <img src="img/burger.png" alt="BO_MCFIRST.webp">
-                </div>
-                <div class="body__main__container__content">
-                    <p>Menu Best Of™</p>
-                    <p>18,00 €</p>
-                </div>
-            </article>
-            <article class="body__main__container swiper-slide">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                </div>
-                <div class="body__main__container__content">
-                    <p>Menu Best Of™</p>
-                    <p>18,00 €</p>
-                </div>
-            </article>
-            <article class="body__main__container swiper-slide">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                </div>
-                <div class="body__main__container__content">
-                    <p>Menu Best Of™</p>
-                    <p>18,00 €</p>
-                </div>
-            </article>
-            <article class="body__main__container swiper-slide">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                </div>
-                <div class="body__main__container__content">
-                    <p>Menu Best Of™</p>
-                    <p>18,00 €</p>
-                </div>
-            </article>
-            <article class="body__main__container swiper-slide">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                </div>
-                <div class="body__main__container__content">
-                    <p>Menu Best Of™</p>
-                    <p>18,00 €</p>
-                </div>
-            </article>
-            <article class="body__main__container swiper-slide">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                </div>
-                <div class="body__main__container__content">
-                    <p>Menu Best Of™</p>
-                    <p>18,00 €</p>
-                </div>
-            </article>
-            <article class="body__main__container swiper-slide">
-                <div class="body__main__container__image">
-                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6543273de91ec9b37cbee283dcf7e888/5954bcb006b10dbfd0bc160f6370faf3.jpeg" alt="BO_MCFIRST.webp">
-                </div>
-                <div class="body__main__container__content">
-                    <p>Menu Best Of™</p>
-                    <p>18,00 €</p>
-                </div>
-            </article>
+            <?php 
+                foreach($products as $product){
+                    echo '
+                    <a href="/product/' . $product->getProductId() . '">
+                        <article class="body__main__container swiper-slide">
+                            <div class="body__main__container__image">
+                                <img src="img/' . $product->getProductImage() . '" alt="BO_MCFIRST.webp">
+                            </div>
+                            <div class="body__main__container__content">
+                                <p>'. $product->getProductName() .'™</p>
+                                <p>'. $product->getProductPrice() .'</p>
+                            </div>
+                        </article>
+                    </a>';
+                }
+            ?>
         </section>
     </section>
 
