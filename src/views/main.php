@@ -27,7 +27,7 @@ include_once VIEWS . "base/Header.php"
                             </div>
                             <div class="body__main__container__content">
                                 <p>'. $product->getProductName() .'™</p>
-                                <p>'. $product->getProductPrice() .'</p>
+                                <p>'. $product->getProductPrice() .' €</p>
                             </div>
                         </article>
                     </a>';

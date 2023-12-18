@@ -16,10 +16,10 @@ class ProductController
     }
 
     // Pour afficher la page produit
-    public function showProduct()
+    public function showProduct($productId)
     {
         $ProductManager = new ProductManager();
-        $product = $this->productManager->getAll();
+        $product = $this->productManager->getProductById($productId);
         require VIEWS . "shop/product.php";
     }
 
