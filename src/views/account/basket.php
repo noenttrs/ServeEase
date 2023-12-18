@@ -16,9 +16,10 @@ require_once VIEWS . "base/Header.php"; ?>
     <section class="body__main__basket">
 
     <?php 
+    $totalGeneral = 0;
     foreach($basket as $product) { 
- 
-         ?>
+
+        ?>
         <table class="body__main__table">
             <tr class="body__main__table__titleOfProduct">
                 <td class="body__main__table__titleOfProduct__imageOfProductTitle">
@@ -53,7 +54,9 @@ require_once VIEWS . "base/Header.php"; ?>
                     </div>
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__priceOfProduct">
-                    €<?php echo $product->getProductPrice() * $product->getProductQuantity()?> EUR
+                    €<?php $totalLigne = $product->getProductPrice() * $product->getProductQuantity(); 
+                    $totalGeneral += $totalLigne;
+                    echo $totalLigne ?> EUR
                 </td>
                 <td class="body__main__product__table__descriptionOfProduct__deleteProduct">
                     <a href="/basket?delete=" class="">
@@ -70,7 +73,7 @@ require_once VIEWS . "base/Header.php"; ?>
             <a href="/shop">Poursuivre mes achats</a>
         </div>
         <div class="body__main__checkout__stripe">
-            <p>Total:<br>€120 EUR</p>
+            <p>Total:<br>€ <?php echo $totalGeneral ?> EUR</p>
             <form action="" class="body__main__checkout__stripe__form">
                 <input type="submit" value="Procéder au paiement">
             </form>
