@@ -27,8 +27,8 @@ main {
 .main__section__categoryDrink__manager__container,
 .main__section__categoryAccompaniment__manager__container,
 .main__section__categoryDessert__manager__container {
-    width: 350px;
-    height: 440px;
+    /* width: 350px;
+    height: 440px; */
     cursor: pointer;
     padding: 10px;
     transition: all .1s linear;
@@ -48,7 +48,7 @@ main {
 .main__section__categoryDrink__manager__container__image img,
 .main__section__categoryAccompaniment__manager__container__image img,
 .main__section__categoryDessert__manager__container__image img {
-    width: 350px;
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
