@@ -1,6 +1,11 @@
 <?php
 $pathCss = "css/shop/product.css";
-require_once VIEWS . "base/Header.php" ?>
+require_once VIEWS . "base/Header.php";
+if(!isset($productId)){
+    header("Location: /404");
+    return;
+}
+?>
 
 <main>
     <section class="body__main__presentation">
