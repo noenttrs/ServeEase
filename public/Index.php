@@ -24,6 +24,7 @@ $router->get('/logout', "ClientController@logout");
 
 // Shop
 $router->get('/product', "ProductController@showProduct");
+$router->get('/shop', "ProductController@showAllProduct");
 $router->post('/product', "ProductController@addBasket");
 
 // Basket
