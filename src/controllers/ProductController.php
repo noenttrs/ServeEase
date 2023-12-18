@@ -26,7 +26,7 @@ class ProductController
     // Pour ajouter un produit au panier
     public function addBasket($id = null)
     {
-        //unset ($_SESSION['basket'] );
+        // unset ($_SESSION['basket'] );
 
         if ($id == null) {
             // Si il n'y a pas de panier en session 
