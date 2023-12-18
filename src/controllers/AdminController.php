@@ -111,12 +111,17 @@ class AdminController
             return;
         }
 
+        var_dump($_POST);
+        var_dump($_FILES);
+        exit;
+
         $productName = $_POST["productName"];
         $productDescription = $_POST["productDescription"];
         $productPrice = $_POST["productPrice"];
         $productImageName = $_FILES["productImage"]["name"];
         $productType = $_POST["productType"];
         $error = false;
+
 
         if(strlen($productName) > 50) {
             $productName = "Le nom du produit ne doit pas dépasser 50 caractères";
