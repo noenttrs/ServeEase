@@ -31,6 +31,8 @@ $router->post('/product', "ProductController@addBasket");
 $router->get('/product', "ProductController@addBakset");
 $router->get('/basket', "ProductController@showBasket");
 $router->get('/basket/:productId/addOne', "ProductController@addBasket");
+$router->get('/basket/:productId/minusOne', "ProductController@minusBasket");
+
 
 // Admin
 $router->get('/admin', "AdminController@showAdmin");
