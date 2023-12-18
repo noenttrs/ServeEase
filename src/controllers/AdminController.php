@@ -111,12 +111,17 @@ class AdminController
             return;
         }
 
+        var_dump($_POST);
+        var_dump($_FILES);
+        exit;
+
         $productName = $_POST["productName"];
         $productDescription = $_POST["productDescription"];
         $productPrice = $_POST["productPrice"];
         $productImageName = $_FILES["productImage"]["name"];
         $productType = $_POST["productType"];
         $error = false;
+
 
         if(strlen($productName) > 50) {
             $productName = "Le nom du produit ne doit pas dépasser 50 caractères";
@@ -137,8 +142,8 @@ class AdminController
 
         if ($_FILES['productImage']["error"] !== UPLOAD_ERR_NO_FILE) {
             $uploaddir = './img/';
-            $uploadfile = $uploaddir . basename($_FILES['employeePicture']['name']);
-            move_uploaded_file($_FILES['employeePicture']['tmp_name'], $uploadfile);
+            $uploadfile = $uploaddir . basename($_FILES['productImage']['name']);
+            move_uploaded_file($_FILES['productImage']['tmp_name'], $uploadfile);
         }
 
         $product = new Product();
