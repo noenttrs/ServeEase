@@ -27,8 +27,6 @@ main {
 .main__section__categoryDrink__manager__container,
 .main__section__categoryAccompaniment__manager__container,
 .main__section__categoryDessert__manager__container {
-    /* width: 350px;
-    height: 440px; */
     cursor: pointer;
     padding: 10px;
     transition: all .1s linear;
@@ -62,4 +60,68 @@ main {
     flex-direction: column;
     gap: 10px;
     padding: 5px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        margin: 25px 30px;
+    }
+
+    main {
+        margin: 100px 30px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    header {
+        margin: 25px 20px;
+    }
+
+    main {
+        margin: 100px 20px;
+    }
+
+    .main__section__categoryBurger__h2,
+    .main__section__categoryDrink__h2,
+    .main__section__categoryAccompaniment__h2,
+    .main__section__categoryDessert__h2 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    .main__section__categoryBurger__h2,
+    .main__section__categoryDrink__h2,
+    .main__section__categoryAccompaniment__h2,
+    .main__section__categoryDessert__h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .main__section__categoryBurger__h2,
+    .main__section__categoryDrink__h2,
+    .main__section__categoryAccompaniment__h2,
+    .main__section__categoryDessert__h2 {
+        font-size: 35px;
+    }
+
+    .main__section__categoryBurger__manager,
+    .main__section__categoryDrink__manager,
+    .main__section__categoryAccompaniment__manager,
+    .main__section__categoryDessert__manager {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .main__section__categoryBurger__h2,
+    .main__section__categoryDrink__h2,
+    .main__section__categoryAccompaniment__h2,
+    .main__section__categoryDessert__h2 {
+        font-size: 32px;
+    }
 }
