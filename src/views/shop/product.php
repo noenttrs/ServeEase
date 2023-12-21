@@ -19,7 +19,6 @@ if(!isset($product)){
         <section class="body__main__presentation__content">
             <h1 class="body__main__presentation__content__name"><?php echo $product->getProductName()?></h1>
             <p class="body__main__presentation__content__price">€<?php echo $product->getProductPrice()?> EUR</p>
-            <p class="body__main__presentation__content__description"><?php echo $product->getProductDescription()?></p>
             <section class="body__main__presentation__content__select">
                 <section class="body__main__presentation__content__select__description">
                     <section class="body__main__presentation__content__select__description__placeholder">
@@ -33,11 +32,7 @@ if(!isset($product)){
                     </section>
                     <section class="body__main__presentation__content__select__description__content">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Atque, molestias? Dolores ratione assumenda architecto nam quod atque officia recusandae harum enim, labore maxime magnam dolore in ex totam delectus pariatur.
-                            Odit corrupti, nemo explicabo nesciunt dolore tempora optio molestias similique! Atque velit mollitia illum a cumque totam libero error vel, adipisci ad voluptates perspiciatis!
-                            Quae numquam nam officiis quas assumenda dicta, ipsum enim aut facilis eos, cupiditate quibusdam cum provident blanditiis, distinctio fuga incidunt necessitatibus veniam illum dolor.
-                            Eos excepturi, dignissimos culpa hic sequi quaerat, a delectus illum qui error placeat voluptates consequuntur molestias at eum quas. Esse, hic at.
+                            <?php echo $product->getProductDescription()?>
                         </p>
                     </section>
                 </section>
