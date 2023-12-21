@@ -18,7 +18,7 @@ if(!isset($product)){
         </section>
         <section class="body__main__presentation__content">
             <h1 class="body__main__presentation__content__name"><?php echo $product->getProductName()?></h1>
-            <p class="body__main__presentation__content__price"><?php echo $product->getProductPrice()?></p>
+            <p class="body__main__presentation__content__price">€<?php echo $product->getProductPrice()?> EUR</p>
             <p class="body__main__presentation__content__description"><?php echo $product->getProductDescription()?></p>
             <section class="body__main__presentation__content__select">
                 <section class="body__main__presentation__content__select__description">
@@ -94,8 +94,8 @@ if(!isset($product)){
             </form>
         </section>
     </section>
-    <script src="js/shop/productSelect.js"></script>
-    <script src="js/shop/productQuantity.js"></script>
+    <script src="/js/shop/productSelect.js"></script>
+    <script src="/js/shop/productQuantity.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".ImageSwipper", {
