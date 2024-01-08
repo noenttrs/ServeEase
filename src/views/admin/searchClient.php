@@ -41,9 +41,9 @@ require VIEWS . "base/header.php";
             </div>
             <div class="body__main__searchClient__form__clientRole">
                 <select name="clientRole" id="clientRoleId">
-                    <option value="0">Client</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Cuisine</option>
+                    <option value="0" <?php echo $client->getClientRole() === 0 ? "selected" : "" ?>>Client</option>
+                    <option value="1" <?php echo $client->getClientRole() === 1 ? "selected" : "" ?>>Admin</option>
+                    <option value="2" <?php echo $client->getClientRole() === 2 ? "selected" : "" ?>>Cuisine</option>
                 </select>
             </div>
             <input type="hidden" name="clientId" value="<?php echo $client->getClientId(); ?>">

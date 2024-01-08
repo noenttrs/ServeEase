@@ -71,14 +71,16 @@ class AdminController
             $error = true;
         }
 
-        if(strlen($clientPasswordValue) < 8) {
-            $clientPassword = "Le mot de passe doit contenir au moins 8 caractères";
-            $error = true;
-        }
-
-        if(!preg_match("#[0-9]+#", $clientPasswordValue)) {
-            $clientPassword = "Le mot de passe doit contenir au moins un chiffre";
-            $error = true;
+        if(strlen($clientPasswordValue) > 0) {
+            if(strlen($clientPasswordValue) < 8) {
+                $clientPassword = "Le mot de passe doit contenir au moins 8 caractères";
+                $error = true;
+            }
+    
+            if(!preg_match("#[0-9]+#", $clientPasswordValue)) {
+                $clientPassword = "Le mot de passe doit contenir au moins un chiffre";
+                $error = true;
+            }
         }
 
         if($error) {
@@ -92,7 +94,7 @@ class AdminController
         $client->setClientSurname($_POST["clientSurname"]);
         $client->setClientMail($_POST["clientMail"]);
 
-        $client->setClientPassword(password_hash($_POST["clientPassword"], PASSWORD_DEFAULT));
+        $client->setClientPassword(strlen($clientPasswordValue) > 0 ? password_hash($_POST["clientPassword"], PASSWORD_DEFAULT) : "");
         $client->setClientFidelity($_POST["clientFidelity"]);
         $client->setClientRole($_POST["clientRole"]);
         $client->setClientId($clientId);

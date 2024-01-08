@@ -31,16 +31,29 @@ class AdminManager {
         $clientId = $client->getClientId();
         $clientFidelity = $client->getClientFidelity();
 
-        $query = $this->db->prepare("UPDATE client SET CLIENT_NAME = :clientName, CLIENT_SURNAME = :clientSurname, CLIENT_MAIL = :clientMail, CLIENT_PASSWORD = :clientPassword, CLIENT_FIDELITY = :clientFidelity, CLIENT_ROLE = :clientRole WHERE CLIENT_ID = :clientId");
-        $query->execute([
-            "clientName" => $clientName,
-            "clientSurname" => $clientSurname,
-            "clientMail" => $clientMail,
-            "clientPassword" => $clientPassword,
-            "clientRole" => $clientRole,	
-            "clientFidelity" => $clientFidelity,
-            "clientId" => $clientId
-        ]);
+
+        if(strlen($clientPassword) > 0) {
+            $query = $this->db->prepare("UPDATE client SET CLIENT_NAME = :clientName, CLIENT_SURNAME = :clientSurname, CLIENT_MAIL = :clientMail, CLIENT_PASSWORD = :clientPassword, CLIENT_FIDELITY = :clientFidelity, CLIENT_ROLE = :clientRole WHERE CLIENT_ID = :clientId");
+            $query->execute([
+                "clientName" => $clientName,
+                "clientSurname" => $clientSurname,
+                "clientMail" => $clientMail,
+                "clientPassword" => $clientPassword,
+                "clientRole" => $clientRole,	
+                "clientFidelity" => $clientFidelity,
+                "clientId" => $clientId
+            ]);
+        } else {
+            $query = $this->db->prepare("UPDATE client SET CLIENT_NAME = :clientName, CLIENT_SURNAME = :clientSurname, CLIENT_MAIL = :clientMail, CLIENT_FIDELITY = :clientFidelity, CLIENT_ROLE = :clientRole WHERE CLIENT_ID = :clientId");
+            $query->execute([
+                "clientName" => $clientName,
+                "clientSurname" => $clientSurname,
+                "clientMail" => $clientMail,
+                "clientRole" => $clientRole,	
+                "clientFidelity" => $clientFidelity,
+                "clientId" => $clientId
+            ]);
+        }
 
         return $query->fetchObject(Client::class);
     }
