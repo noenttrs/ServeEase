@@ -15,11 +15,6 @@ require_once VIEWS . "base/Header.php"; ?>
     </p>
     <section class="body__main__basket">
 
-    <?php 
-    $totalGeneral = 0;
-    foreach($basket as $product) { 
-
-        ?>
         <table class="body__main__table">
             <tr class="body__main__table__titleOfProduct">
                 <td class="body__main__table__titleOfProduct__imageOfProductTitle">
@@ -36,36 +31,41 @@ require_once VIEWS . "base/Header.php"; ?>
                 </td>
                 <td></td>
             </tr>
-            <tr class="body__main__product__table__descriptionOfProduct">
-                <td class="body__main__product__table__descriptionOfProduct__imageOfProduct">
-                    <div class="body__main__product__table__descriptionOfProduct__imageOfProduct__container">
-                        <img src="/img/BO_MCFIRST.webp" alt="">
-                    </div>
-                </td>
-                <td class="body__main__product__table__descriptionOfProduct__nameOfProduct">
-                    <?php echo $product->getProductName()?>
-                </td>
-                <td class="body__main__product__table__descriptionOfProduct__quantityOfProduct">
-                    <div class="body__main__product__table__descriptionOfProduct__quantityOfProduct__container">
-                        <a href="/basket/<?php echo $product->getProductId()?>/minusOne"><i class="fa-solid fa-minus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__minus"></i></a>
-                        <span><?php echo $product->getProductQuantity()?></span>
-                        <input type="hidden" value="">
-                        <a href="/basket/<?php echo $product->getProductId()?>/addOne"><i class="fa-solid fa-plus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__plus"></i></a>
-                    </div>
-                </td>
-                <td class="body__main__product__table__descriptionOfProduct__priceOfProduct">
-                    €<?php $totalLigne = $product->getProductPrice() * $product->getProductQuantity(); 
-                    $totalGeneral += $totalLigne;
-                    echo $totalLigne ?> EUR
-                </td>
-                <td class="body__main__product__table__descriptionOfProduct__deleteProduct">
-                    <a href="/basket/<?php echo $product->getProductId()?>/delete" class="">
-                        <i class="fa-solid fa-xmark"></i>
-                    </a>
-                </td>
-            </tr>
+            <?php
+            $totalGeneral = 0;
+            foreach ($basket as $product) {
+
+            ?>
+                <tr class="body__main__product__table__descriptionOfProduct">
+                    <td class="body__main__product__table__descriptionOfProduct__imageOfProduct">
+                        <div class="body__main__product__table__descriptionOfProduct__imageOfProduct__container">
+                            <img src="/img/BO_MCFIRST.webp" alt="">
+                        </div>
+                    </td>
+                    <td class="body__main__product__table__descriptionOfProduct__nameOfProduct">
+                        <?php echo $product->getProductName() ?>
+                    </td>
+                    <td class="body__main__product__table__descriptionOfProduct__quantityOfProduct">
+                        <div class="body__main__product__table__descriptionOfProduct__quantityOfProduct__container">
+                            <a href="/basket/<?php echo $product->getProductId() ?>/minusOne"><i class="fa-solid fa-minus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__minus"></i></a>
+                            <span><?php echo $product->getProductQuantity() ?></span>
+                            <input type="hidden" value="">
+                            <a href="/basket/<?php echo $product->getProductId() ?>/addOne"><i class="fa-solid fa-plus body__main__product__table__descriptionOfProduct__quantityOfProduct__container__plus"></i></a>
+                        </div>
+                    </td>
+                    <td class="body__main__product__table__descriptionOfProduct__priceOfProduct">
+                        €<?php $totalLigne = $product->getProductPrice() * $product->getProductQuantity();
+                            $totalGeneral += $totalLigne;
+                            echo $totalLigne ?> EUR
+                    </td>
+                    <td class="body__main__product__table__descriptionOfProduct__deleteProduct">
+                        <a href="/basket/<?php echo $product->getProductId() ?>/delete" class="">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                    </td>
+                </tr>
+            <?php } ?>
         </table>
-    <?php } ?>
     </section>
     <section class="body__main__checkout">
         <div class="body__main__checkout__backToShop">
