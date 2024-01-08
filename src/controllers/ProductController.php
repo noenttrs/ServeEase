@@ -39,7 +39,7 @@ class ProductController
             if (!isset($_SESSION["basket"])) {
                 $_SESSION['basket'] = [];
                 $_SESSION['basket']['productItem'] = [];
-                array_push($_SESSION['basket']['productItem'], [$_POST['productId'], 1]);
+                array_push($_SESSION['basket']['productItem'], [$_POST['productId'], $_POST['productQuantity']]);
             }
             // Si il y a deja un panier, on mets le produit dedans
             else {
@@ -55,7 +55,7 @@ class ProductController
                 }
                 //sinon on met le produit dans le panier avec qte 1
                 if ($trouve==false) {
-                    array_push($_SESSION['basket']['productItem'], [$_POST['productId'], 1]);
+                    array_push($_SESSION['basket']['productItem'], [$_POST['productId'], $_POST['productQuantity']]);
                 }
             }
         }

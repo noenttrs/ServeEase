@@ -82,10 +82,10 @@ if(!isset($product)){
                     <i class="fa-solid fa-minus body__main__presentation__content__addPanerForm__inputQuantity__minus"></i>
                     <span class="body__main__presentation__content__addPanerForm__inputQuantity__placeholder">1</span>
                     <input type="hidden" value="1" name="productQuantity" class="body__main__presentation__content__addPanerForm__inputQuantity__productQuantity">
-                    <input type="hidden" value="1" name="productId" class="body__main__presentation__content__addPanerForm__inputQuantity__productId">
+                    <input type="hidden" value="<?php echo $product -> getProductId() ?>" name="productId" class="body__main__presentation__content__addPanerForm__inputQuantity__productId">
                     <i class="fa-solid fa-plus body__main__presentation__content__addPanerForm__inputQuantity__plus"></i>
                 </div>
-                <input type="submit" value="Ajouter un panier" class="body__main__presentation__content__addPanerForm__inputSubmit">
+                <input type="submit" value="Ajouter au panier" class="body__main__presentation__content__addPanerForm__inputSubmit">
             </form>
         </section>
     </section>
