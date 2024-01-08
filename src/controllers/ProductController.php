@@ -31,10 +31,10 @@ class ProductController
         require VIEWS . "shop/allProduct.php";
     }
     // Pour ajouter un produit au panier
-    public function addBasket($id = null)
+    public function addBasket($productId = null)
     {
 
-        if ($id == null) {
+        if ($productId == null) {
             // Si il n'y a pas de panier en session 
             if (!isset($_SESSION["basket"])) {
                 $_SESSION['basket'] = [];
@@ -54,15 +54,15 @@ class ProductController
                     }
                 }
                 //sinon on met le produit dans le panier avec qte 1
-                if ($trouve==false) {
+                if ($trouve == false) {
                     array_push($_SESSION['basket']['productItem'], [$_POST['productId'], $_POST['productQuantity']]);
                 }
             }
         }
-        if ($id != null) {
+        else {
             $compteur = 0;
             foreach ($_SESSION["basket"]["productItem"] as $productItem) {
-                if ($productItem[0] == $id) {
+                if ($productItem[0] == $productId) {   
                     $_SESSION["basket"]["productItem"][$compteur][1] += 1;
                     $compteur += 1;
                 }
@@ -80,9 +80,9 @@ class ProductController
             $compteur = 0;
             foreach ($_SESSION["basket"]["productItem"] as $productItem) {
                 if ($productItem[0] == $id) {
-                    if( $_SESSION["basket"]["productItem"][$compteur][1] > 1){
+                    if ($_SESSION["basket"]["productItem"][$compteur][1] > 1) {
                         $_SESSION["basket"]["productItem"][$compteur][1] -= 1;
-                        }
+                    }
                     $compteur += 1;
                 }
             }
@@ -92,14 +92,15 @@ class ProductController
     }
 
     // Pour suprimer un produit au panier
-    public function delete($id = null){
+    public function delete($id = null)
+    {
         if ($id != null) {
             $compteur = 0;
             foreach ($_SESSION["basket"]["productItem"] as $productItem) {
                 // Si l'id du produit est trouvé
                 if ($productItem[0] == $id) {
                     // On enleve le produit du panier
-                    unset ($_SESSION['basket']["productItem"][$compteur]);
+                    unset($_SESSION['basket']["productItem"][$compteur]);
                     $compteur += 1;
                 }
             }
