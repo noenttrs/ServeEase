@@ -73,56 +73,8 @@ class ProductController
         }
 
         $this->showBasket();
+    
     }
-
-    /*
-     * ANCIEN CODE
-     */
-    /*
-    public function addBasket($productId = null)
-    {
-
-        if ($productId == null) {
-            print_r('if($productId == null)...');
-            var_dump($productId);
-            // Si il n'y a pas de panier en session
-            if (!isset($_SESSION["basket"])) {
-                $_SESSION['basket'] = [];
-                $_SESSION['basket']['productItem'] = [];
-                array_push($_SESSION['basket']['productItem'], [$_POST['productId'], $_POST['productQuantity']]);
-            }
-            // Si il y a deja un panier, on mets le produit dedans
-            else {
-                $compteur = 0;
-                $trouve = false;
-                //si le produit est déjà dedans on incrémente la quantité
-                foreach ($_SESSION["basket"]["productItem"] as $productItem) {
-                    var_dump($productItem);
-                    if ($productItem[0] == $_POST['productId']) {
-                        $_SESSION["basket"]["productItem"][$compteur][1] += 1;
-                        $trouve = true;
-                        $compteur += 1;
-                    } else {
-                        array_push($_SESSION['basket']['productItem'], [$_POST['productId'], $_POST['productQuantity']]);
-                    }
-                }
-            }
-        }
-        else {
-            var_dump('else');
-            $compteur = 0;
-            foreach ($_SESSION["basket"]["productItem"] as $productItem) {
-                if ($productItem[0] == $productId) {
-                    $_SESSION["basket"]["productItem"][$compteur][1] += 1;
-                    $compteur += 1;
-                }
-            }
-        }
-
-        $this->showBasket();
-    }
-    */
-    /* FIN ANCIEN CODE */
 
     // Pour enlever un produit au panier
     public function minusBasket($id = null)
